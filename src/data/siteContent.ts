@@ -26,10 +26,9 @@ export const siteContent = {
     /** Korte omschrijving voor footer en SEO */
     shortDescription:
       "Professionele en vrolijke schmink voor kinderfeestjes, scholen, verjaardagen en evenementen.",
-    /** ← Vul KvK-nummer in, of laat leeg */
-    kvkNumber: "[KVK-NUMMER]",
-    /** ← Vul werkgebied in, bijv. "Rotterdam en omgeving" */
-    serviceArea: "[WERKGEBIED]",
+    /** Geen KvK – leeg laten */
+    kvkNumber: "",
+    serviceArea: "Veenendaal en omstreken",
     /** ← Vul website-URL in voor SEO (zonder slash aan het einde) */
     websiteUrl: "https://www.voorbeeld.nl",
   },
@@ -39,37 +38,23 @@ export const siteContent = {
    * Alle telefoon-, e-mail- en WhatsApp-links komen hier vandaan.
    */
   contact: {
-    /** ← Vul telefoonnummer in (zichtbaar op de site) */
-    phone: "[TELEFOONNUMMER]",
-    /** ← Alleen cijfers, voor tel:-link, bijv. "0612345678" */
-    phoneLink: "0612345678",
-    /** ← Vul e-mailadres in */
-    email: "[E-MAILADRES]",
-    /** ← WhatsApp-nummer met landcode, alleen cijfers, bijv. "31612345678" */
-    whatsappNumber: "[WHATSAPP-NUMMER]",
-    /** Vooraf ingevuld WhatsApp-bericht (datum wordt door het formulier aangevuld) */
+    phone: "+31 6 53356421",
+    phoneLink: "+31653356421",
+    /** ← Vul e-mailadres in zodra het bekend is */
+    email: "",
+    emailLabel: "E-mailadres volgt binnenkort",
+    whatsappNumber: "31653356421",
     whatsappMessage:
-      "Hallo Nolie, ik heb interesse in schminken voor een feestje of evenement. Ben je beschikbaar op [datum]?",
-  },
-
-  /**
-   * SOCIAL MEDIA
-   * Vul de volledige URL's in, of laat de placeholders staan.
-   */
-  social: {
-    /** ← Vul Instagram-URL in */
-    instagram: "[INSTAGRAM-URL]",
-    /** ← Vul Facebook-URL in */
-    facebook: "[FACEBOOK-URL]",
+      "Hallo Nolie, ik heb interesse in schminken voor een feestje of evenement. Ben je beschikbaar?",
   },
 
   /**
    * SEO / METADATA
    */
   seo: {
-    title: "Nolie Schmink | Kinderfeestjes en evenementen",
+    title: "Nolie Schmink | Schminken vanaf € 50 per uur",
     description:
-      "Professionele en vrolijke schmink voor kinderfeestjes, scholen, verjaardagen en evenementen. Bekijk het werk, de tarieven en de beschikbaarheid van Nolie Schmink.",
+      "Schminken voor feestjes en evenementen vanaf € 50 per uur. Bekijk het werk van Nadine en neem contact op.",
     locale: "nl_NL",
     language: "nl",
   },
@@ -78,21 +63,16 @@ export const siteContent = {
    * HERO
    */
   hero: {
-    title: "Een kleurrijk gezicht en een grote glimlach",
+    title: "Vrolijke schmink op locatie",
     subtitle:
-      "Professionele en vrolijke schmink voor kinderfeestjes, evenementen, scholen en andere bijzondere momenten.",
+      "Voor kinderfeestjes, verjaardagen en andere bijzondere momenten. Ik kom naar jou toe met huidvriendelijke schmink en een flinke dosis creativiteit.",
     primaryCta: "Bekijk mijn werk",
-    secondaryCta: "Vraag beschikbaarheid aan",
+    secondaryCta: "Neem contact op",
+    eyebrow: "Nolie Schmink",
     image: {
       src: "/images/nadine-at-work.jpg",
       alt: "Vrolijk meisje met professionele roze en witte bloemenschemink op haar voorhoofd",
     },
-    trustItems: [
-      "Persoonlijke aandacht",
-      "Huidvriendelijke materialen",
-      "Op locatie",
-      "Voor feestjes en evenementen",
-    ],
   },
 
   /**
@@ -111,78 +91,6 @@ export const siteContent = {
       src: "/images/nadine-portrait.jpg",
       alt: "Portretfoto van Nadine, schminkster, lachend tegen een zachte paars-roze achtergrond",
     },
-    features: [
-      {
-        title: "Creatief en geduldig",
-        description:
-          "Ieder ontwerp krijgt de aandacht die het verdient, ook als er even nagedacht moet worden.",
-      },
-      {
-        title: "Persoonlijke aandacht",
-        description:
-          "Kinderen en volwassenen voelen zich gehoord. Samen kiezen we iets dat écht bij hen past.",
-      },
-      {
-        title: "Met zorg en hygiëne",
-        description:
-          "Materialen worden zorgvuldig gereinigd en er wordt gewerkt met schmink die bedoeld is voor de huid.",
-      },
-    ],
-  },
-
-  /**
-   * DIENSTEN
-   */
-  services: {
-    title: "Voor welke gelegenheden?",
-    subtitle:
-      "Van een knus kinderfeestje tot een groot buurtfeest: ik schmink graag op locatie. Maatwerk is altijd mogelijk – vertel gerust wat jij in gedachten hebt.",
-    items: [
-      {
-        id: "kinderfeestjes",
-        title: "Kinderfeestjes",
-        description:
-          "Maak van een verjaardag of speelmiddag een kleurrijk feestje. Kinderen kiezen zelf hun favoriete ontwerp.",
-        icon: "partyPopper" as const,
-      },
-      {
-        id: "verjaardagen",
-        title: "Verjaardagen",
-        description:
-          "Jarig en zin in iets bijzonders? Schmink past perfect bij een feestelijke middag of avond.",
-        icon: "cake" as const,
-      },
-      {
-        id: "scholen",
-        title: "Scholen en kinderopvang",
-        description:
-          "Voor schoolfeesten, themaweken of open dagen. Snelle, vrolijke ontwerpen voor grotere groepen.",
-        icon: "school" as const,
-      },
-      {
-        id: "buurtfeesten",
-        title: "Buurtfeesten en braderieën",
-        description:
-          "Een gezellige stand waar voorbijgangers even kunnen aanschuiven voor een vrolijk gezicht.",
-        icon: "store" as const,
-      },
-      {
-        id: "bedrijven",
-        title: "Bedrijfsevenementen",
-        description:
-          "Familiedagen, openingen of personeelsfeesten: schmink zorgt voor een speelse, ontspannen sfeer.",
-        icon: "briefcase" as const,
-      },
-      {
-        id: "themafeesten",
-        title: "Themafeesten en festivals",
-        description:
-          "Halloween, carnaval, sprookjes of superhelden – ik denk graag mee over passende ontwerpen.",
-        icon: "sparkles" as const,
-      },
-    ],
-    customNote:
-      "Staat jouw gelegenheid er niet tussen? Geen probleem. Stuur een berichtje met jouw situatie en we kijken samen wat mogelijk is.",
   },
 
   /**
@@ -232,6 +140,27 @@ export const siteContent = {
         alt: "Blauwe octopus-schmink met tentakels en witte bubbelaccenten",
       },
       {
+        id: "vos",
+        title: "Vos",
+        category: "dieren",
+        src: "/images/schmink-vos.jpg",
+        alt: "Oranje vos-schmink met oortjes op het voorhoofd en neusje",
+      },
+      {
+        id: "flamingo-2",
+        title: "Flamingo",
+        category: "dieren",
+        src: "/images/schmink-flamingo-2.jpg",
+        alt: "Roze flamingo-schmink met vleugels en veren op het voorhoofd",
+      },
+      {
+        id: "flamingo-3",
+        title: "Flamingo",
+        category: "dieren",
+        src: "/images/schmink-flamingo-3.jpg",
+        alt: "Roze flamingo-schminkontwerp met symmetrische vleugels",
+      },
+      {
         id: "prinses-kroon",
         title: "Prinsessenkroon",
         category: "fantasie",
@@ -251,6 +180,27 @@ export const siteContent = {
         category: "fantasie",
         src: "/images/schmink-draak.jpg",
         alt: "Groene drakenschemink met vleugels, schubben en vuur op het voorhoofd",
+      },
+      {
+        id: "fantasiekroon",
+        title: "Fantasiekroon",
+        category: "fantasie",
+        src: "/images/schmink-fantasie.jpg",
+        alt: "Meisje met kleurrijke fantasiekroon-schmink in groen, oranje en roze met steentjes",
+      },
+      {
+        id: "fee",
+        title: "Fee",
+        category: "fantasie",
+        src: "/images/schmink-fee.jpg",
+        alt: "Roze en wit fee-ontwerp met bloemblaadjes en sterretjes",
+      },
+      {
+        id: "blauwe-prinses",
+        title: "Blauwe prinses",
+        category: "fantasie",
+        src: "/images/schmink-blauwe-prinses.jpg",
+        alt: "Blauw-wit prinsessenontwerp met kroon en swirls",
       },
       {
         id: "superheld",
@@ -281,11 +231,25 @@ export const siteContent = {
         alt: "Sierlijke bloemenschemink in roze en wit met swirls en glitter",
       },
       {
-        id: "bloemen-kroon",
+        id: "bloemenkroon",
         title: "Bloemenkroon",
         category: "bloemen",
         src: "/images/schmink-bloemen-kroon.jpg",
         alt: "Meisje met roze bloemenkroon-schmink op het voorhoofd en glittersteentje tussen de wenkbrauwen",
+      },
+      {
+        id: "hart",
+        title: "Hart",
+        category: "bloemen",
+        src: "/images/schmink-hart.jpg",
+        alt: "Rood-wit hartenschemink op het voorhoofd met swirls en sterretjes",
+      },
+      {
+        id: "paarse-ros",
+        title: "Paarse roos",
+        category: "bloemen",
+        src: "/images/schmink-paarse-ros.jpg",
+        alt: "Paarse rozen-schmink op de wang met witte swirls en sterretjes",
       },
       {
         id: "minnie",
@@ -295,248 +259,44 @@ export const siteContent = {
         alt: "Meisje met Minnie Mouse-schmink: rode strik met stippen, oortjes en roze wangen",
       },
       {
-        id: "fantasie",
-        title: "Fantasiekroon",
-        category: "fantasie",
-        src: "/images/schmink-fantasie.jpg",
-        alt: "Meisje met kleurrijke fantasiekroon-schmink in groen, oranje en roze met steentjes",
+        id: "halloween",
+        title: "Halloween",
+        category: "thema",
+        src: "/images/schmink-halloween.jpg",
+        alt: "Paars spinnenweb-schmink met spin op het voorhoofd",
       },
       {
-        id: "at-work",
+        id: "pikachu",
+        title: "Pikachu",
+        category: "thema",
+        src: "/images/schmink-pikachu.jpg",
+        alt: "Pikachu-schmink op het voorhoofd met Pokéball en bliksemflits",
+      },
+      {
+        id: "voetbal",
+        title: "Voetbal",
+        category: "thema",
+        src: "/images/schmink-voetbal.jpg",
+        alt: "Voetbal-schmink op de wang met vlammen",
+      },
+      {
+        id: "bloemenschemink",
         title: "Bloemenschemink",
         category: "bloemen",
         src: "/images/nadine-at-work.jpg",
-        alt: "Vrolijk meisje met professionele roze en witte bloemenschemink op haar voorhoofd",
-      },
-      {
-        id: "portrait",
-        title: "Sfeerimpressie",
-        category: "thema",
-        src: "/images/nadine-portrait.jpg",
-        alt: "Sfeerimpressie van schminkwerk door Nolie Schmink",
+        alt: "Vrolijk meisje met professionele roze en witte bloemenschemink op het voorhoofd",
       },
     ],
   },
 
   /**
-   * TARIEVEN
-   * ← Vul de bedragen, aantallen en tijdsduur in.
+   * TARIEF
+   * ← Pas het uurtarief hier aan.
    */
   pricing: {
-    title: "Tarieven",
-    subtitle:
-      "Hieronder vind je een indicatie van de pakketten. De definitieve prijs hangt af van locatie, duur en aantal personen.",
-    packages: [
-      {
-        id: "klein",
-        name: "Klein feestje",
-        /** ← Pas startbedrag aan indien nodig */
-        price: "Vanaf € 85",
-        featured: false,
-        badge: null as string | null,
-        features: [
-          "Geschikt voor een klein kinderfeestje",
-          "Tot 8 kinderen",
-          "Maximaal 1,5 uur",
-          "Keuze uit verschillende ontwerpen",
-        ],
-      },
-      {
-        id: "maatwerk",
-        name: "Feest op maat",
-        /** ← Pas startbedrag aan indien nodig */
-        price: "Vanaf € 165",
-        featured: true,
-        badge: "Meest gekozen",
-        features: [
-          "Voor grotere verjaardagen en particuliere feesten",
-          "Duur en aantal kinderen in overleg",
-          "Thema's vooraf bespreekbaar",
-          "Persoonlijke afstemming van wensen",
-        ],
-      },
-      {
-        id: "evenement",
-        name: "Evenement",
-        price: "Vanaf € 90 per uur",
-        featured: false,
-        badge: null as string | null,
-        features: [
-          "Voor scholen, bedrijven, braderieën en evenementen",
-          "Uurtarief of dagdeelprijs in overleg",
-          "Snelle ontwerpen voor grotere groepen",
-          "Flexibel in te plannen",
-        ],
-      },
-    ],
-    extras: {
-      /** ← Pas reiskosten aan indien nodig */
-      travelCosts: "€ 0,35 per km (vanaf 20 km)",
-      /** ← Pas minimale boekingsduur aan indien nodig */
-      minimumDuration: "1,5 uur",
-      notes: [
-        "Eventuele parkeerkosten worden doorberekend.",
-        "Een definitieve prijs is afhankelijk van locatie, duur en aantal personen.",
-      ],
-    },
-    cta: "Vraag een vrijblijvende prijsopgave aan",
-  },
-
-  /**
-   * WERKWIJZE / BOEKINGSPROCES
-   */
-  process: {
-    title: "Zo werkt boeken",
-    subtitle:
-      "In vijf duidelijke stappen van aanvraag naar een kleurrijk feest.",
-    steps: [
-      {
-        number: 1,
-        title: "Aanvraag versturen",
-        description:
-          "Vul het contactformulier in of stuur een WhatsApp-berichtje met de datum, locatie en wat je ongeveer in gedachten hebt.",
-        icon: "send" as const,
-      },
-      {
-        number: 2,
-        title: "Beschikbaarheid controleren",
-        description:
-          "Ik kijk of de gewenste datum en tijd nog vrij zijn en laat zo snel mogelijk iets van me horen.",
-        icon: "calendarCheck" as const,
-      },
-      {
-        number: 3,
-        title: "Wensen bespreken",
-        description:
-          "Samen stemmen we thema, aantal kinderen, duur en eventuele bijzondere wensen af.",
-        icon: "messageCircle" as const,
-      },
-      {
-        number: 4,
-        title: "Boeking bevestigen",
-        description:
-          "Na akkoord ontvang je een bevestiging met de afspraken. Dan staat alles helder op papier.",
-        icon: "clipboardCheck" as const,
-      },
-      {
-        number: 5,
-        title: "Schminken op locatie",
-        description:
-          "Ik kom naar jou toe, zet mijn spullen klaar en zorg voor vrolijke gezichten en grote glimlachen.",
-        icon: "palette" as const,
-      },
-    ],
-    onLocation: {
-      title: "Wat heb ik op locatie nodig?",
-      items: [
-        "Een goed verlichte plek",
-        "Beschutting tegen regen, wind en felle zon",
-        "Toegang tot schoon water",
-        "Voldoende werkruimte",
-        "Indien afgesproken: een tafel en twee stoelen",
-      ],
-    },
-  },
-
-  /**
-   * HYGIËNE EN VEILIGHEID
-   */
-  hygiene: {
-    title: "Hygiëne en veiligheid",
-    subtitle:
-      "Een veilig en prettig gevoel is minstens zo belangrijk als een mooi resultaat.",
-    items: [
-      "Materialen en penselen worden zorgvuldig gereinigd.",
-      "Er wordt gewerkt met schmink die bedoeld is voor gebruik op de huid.",
-      "Er wordt niet geschminkt over wondjes, huidinfecties of sterk geïrriteerde huid.",
-      "Meld bekende allergieën of overgevoeligheden vooraf.",
-      "Bij twijfel kan worden afgezien van schminken.",
-      "Schmink kan meestal met lauw water en milde zeep worden verwijderd.",
-    ],
-    disclaimer:
-      "Een allergische reactie is nooit volledig uit te sluiten. Ouders en verzorgers blijven verantwoordelijk voor het doorgeven van bekende allergieën en huidproblemen.",
-  },
-
-  /**
-   * VEELGESTELDE VRAGEN
-   * ← Pas antwoorden aan waar nodig.
-   */
-  faq: {
-    title: "Veelgestelde vragen",
-    subtitle: "Snel antwoord op de vragen die het vaakst gesteld worden.",
-    items: [
-      {
-        question: "Vanaf welke leeftijd kunnen kinderen worden geschminkt?",
-        answer:
-          "In de praktijk schmink ik vanaf ongeveer 3 jaar, afhankelijk van of het kind rustig kan blijven zitten. Bij twijfel overleggen we vooraf.",
-      },
-      {
-        question: "Hoeveel kinderen kunnen per uur worden geschminkt?",
-        answer:
-          "Dat hangt af van het type ontwerp. Bij eenvoudige, snelle ontwerpen zijn er vaak meer kinderen per uur mogelijk dan bij uitgebreide designs. We stemmen dit vooraf af op jouw feest.",
-      },
-      {
-        question: "Kunnen kinderen zelf een ontwerp kiezen?",
-        answer:
-          "Ja, dat mag zeker! Ik neem voorbeelden mee en denk mee wat past bij leeftijd, thema en beschikbare tijd.",
-      },
-      {
-        question: "Wat moet er op locatie aanwezig zijn?",
-        answer:
-          "Een goed verlichte, beschutte plek, toegang tot schoon water en voldoende werkruimte. Indien afgesproken: een tafel en twee stoelen.",
-      },
-      {
-        question: "Werk je ook buiten?",
-        answer:
-          "Ja, buiten schminken is mogelijk, mits er beschutting is tegen regen, wind en felle zon. Bij slecht weer zoeken we samen naar een passende oplossing.",
-      },
-      {
-        question: "In welke regio ben je beschikbaar?",
-        answer:
-          "Ik werk in [WERKGEBIED]. Voor locaties daarbuiten is overleg mogelijk; er kunnen reiskosten in rekening worden gebracht.",
-      },
-      {
-        question: "Hoe verwijder je de schmink?",
-        answer:
-          "Meestal met lauw water en milde zeep. Vermijd agressieve middelen. Bij hardnekkige glitter of details kan een beetje oliehoudende cleanser helpen.",
-      },
-      {
-        question: "Wat gebeurt er bij een gevoelige huid of allergie?",
-        answer:
-          "Geef bekende allergieën of huidproblemen altijd vooraf door. Over wondjes of geïrriteerde huid schmink ik niet. Bij twijfel zien we af van schminken – veiligheid gaat voor.",
-      },
-      {
-        question: "Hoe ver van tevoren moet ik boeken?",
-        answer:
-          "Hoe eerder, hoe beter – vooral in het weekend en in drukke periodes. Soms is korte termijn nog mogelijk; stuur gerust een aanvraag.",
-      },
-      {
-        question: "Wat gebeurt er als ik mijn boeking annuleer?",
-        answer:
-          "Annuleringsvoorwaarden staan beschreven op de pagina Algemene en annuleringsvoorwaarden. Neem bij wijzigingen zo snel mogelijk contact op, dan kijken we samen wat er mogelijk is.",
-      },
-    ],
-  },
-
-  /**
-   * CONTACTSECTIE
-   */
-  contactSection: {
-    title: "Maak van jouw feest iets kleurrijks",
-    subtitle:
-      "Vul het formulier in of neem direct contact op. Ik reageer zo snel mogelijk op jouw aanvraag.",
-    successMessage:
-      "Bedankt voor je aanvraag! Je e-mailprogramma opent zo met een voorbereid bericht. Verstuur het bericht om je aanvraag door te geven.",
-    occasionOptions: [
-      "Kinderfeestje",
-      "Verjaardag",
-      "School of kinderopvang",
-      "Buurtfeest of braderie",
-      "Bedrijfsevenement",
-      "Themafeest of festival",
-      "Anders",
-    ],
-    locationTypeOptions: ["Binnen", "Buiten", "Nog niet zeker"],
+    hourlyRate: "€ 50",
+    unit: "per uur",
+    note: "Op locatie. Neem contact op voor beschikbaarheid en een exacte prijsopgave.",
   },
 
   /**
@@ -545,22 +305,26 @@ export const siteContent = {
   nav: {
     links: [
       { href: "#over-mij", label: "Over mij" },
-      { href: "#diensten", label: "Diensten" },
       { href: "#portfolio", label: "Portfolio" },
-      { href: "#tarieven", label: "Tarieven" },
-      { href: "#werkwijze", label: "Werkwijze" },
-      { href: "#faq", label: "FAQ" },
       { href: "#contact", label: "Contact" },
     ],
-    cta: "Beschikbaarheid aanvragen",
+    cta: "Neem contact op",
+  },
+
+  /**
+   * CONTACTSECTIE
+   */
+  contactSection: {
+    title: "Interesse?",
+    subtitle:
+      "Neem contact op via WhatsApp of bel me. Je e-mailadres volgt binnenkort ook op deze pagina.",
   },
 
   /**
    * FOOTER
    */
   footer: {
-    tagline:
-      "Vrolijke gezichten, warme aandacht en een feestje om naar uit te kijken.",
+    tagline: "Schminken vanaf € 50 per uur · op locatie",
   },
 } as const;
 
@@ -572,20 +336,13 @@ export type PortfolioCategoryId =
   | "helden"
   | "bloemen"
   | "thema";
-export type ServiceIconName =
-  (typeof siteContent.services.items)[number]["icon"];
-export type ProcessIconName =
-  (typeof siteContent.process.steps)[number]["icon"];
 
 /**
  * Bouwt een WhatsApp-URL met optionele datum in het bericht.
  */
-export function getWhatsAppUrl(date?: string): string {
+export function getWhatsAppUrl(): string {
   const number = siteContent.contact.whatsappNumber.replace(/\D/g, "");
-  let message: string = siteContent.contact.whatsappMessage;
-  if (date) {
-    message = message.replace("[datum]", date);
-  }
+  const message = siteContent.contact.whatsappMessage;
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 

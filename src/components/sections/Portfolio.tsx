@@ -52,7 +52,7 @@ export function Portfolio() {
     lightboxIndex !== null ? filtered[lightboxIndex] : null;
 
   return (
-    <Section id="portfolio" className="bg-surface-alt/60" ariaLabelledBy="portfolio-title">
+    <Section id="portfolio" className="border-t border-lavender/30 bg-surface-alt/40" ariaLabelledBy="portfolio-title">
       <SectionHeading
         id="portfolio-title"
         title={portfolio.title}
@@ -73,10 +73,10 @@ export function Portfolio() {
               role="tab"
               aria-selected={selected}
               onClick={() => setActiveCategory(cat.id as PortfolioCategoryId)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
+              className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
                 selected
-                  ? "bg-purple-soft text-white shadow-md shadow-purple-soft/25"
-                  : "bg-white text-ink-muted shadow-sm hover:bg-lavender/30 hover:text-purple-deep"
+                  ? "bg-purple-soft text-white"
+                  : "bg-white text-ink-muted hover:text-purple-deep"
               }`}
             >
               {cat.label}

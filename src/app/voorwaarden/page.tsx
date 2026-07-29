@@ -25,7 +25,7 @@ const sections = [
   },
   {
     title: "Reiskosten",
-    body: `Reiskosten kunnen in rekening worden gebracht afhankelijk van de locatie. Indicatie: ${siteContent.pricing.extras.travelCosts}. Parkeerkosten worden doorberekend indien van toepassing.`,
+    body: `Het uurtarief is ${siteContent.pricing.hourlyRate} ${siteContent.pricing.unit}. Reiskosten kunnen in rekening worden gebracht afhankelijk van de locatie. Parkeerkosten worden doorberekend indien van toepassing.`,
   },
   {
     title: "Annulering door de klant",
