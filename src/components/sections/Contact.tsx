@@ -3,8 +3,7 @@ import { siteContent, getWhatsAppUrl } from "@/data/siteContent";
 import { Section, SectionHeading } from "@/components/ui/Section";
 
 export function Contact() {
-  const { contactSection, contact, business, pricing } = siteContent;
-  const hasEmail = contact.email.length > 0;
+  const { contactSection, contact, business } = siteContent;
 
   return (
     <Section
@@ -17,10 +16,6 @@ export function Contact() {
         title={contactSection.title}
         subtitle={contactSection.subtitle}
       />
-
-      <p className="mx-auto -mt-4 mb-8 max-w-xl text-center text-sm text-ink-muted">
-        {pricing.hourlyRate} {pricing.unit} · {pricing.note}
-      </p>
 
       <div className="mx-auto grid max-w-lg gap-3 sm:max-w-md">
         <a
@@ -47,26 +42,16 @@ export function Contact() {
           </span>
         </a>
 
-        {hasEmail ? (
-          <a
-            href={`mailto:${contact.email}`}
-            className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
-          >
-            <Mail className="h-6 w-6 shrink-0 text-purple-soft" aria-hidden />
-            <span>
-              <span className="block font-semibold text-ink">E-mail</span>
-              <span className="block text-sm text-ink-muted">{contact.email}</span>
-            </span>
-          </a>
-        ) : (
-          <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm">
-            <Mail className="h-6 w-6 shrink-0 text-ink-muted/50" aria-hidden />
-            <span>
-              <span className="block font-semibold text-ink">E-mail</span>
-              <span className="block text-sm text-ink-muted">{contact.emailLabel}</span>
-            </span>
-          </div>
-        )}
+        <a
+          href={`mailto:${contact.email}`}
+          className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+        >
+          <Mail className="h-6 w-6 shrink-0 text-purple-soft" aria-hidden />
+          <span>
+            <span className="block font-semibold text-ink">E-mail</span>
+            <span className="block text-sm text-ink-muted">{contact.email}</span>
+          </span>
+        </a>
 
         <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm">
           <MapPin className="h-6 w-6 shrink-0 text-purple-soft" aria-hidden />

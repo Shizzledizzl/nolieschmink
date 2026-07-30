@@ -21,7 +21,7 @@ export const siteContent = {
   business: {
     /** ← Vul hier de definitieve bedrijfsnaam in */
     name: "Nolie Schmink",
-    /** Voornaam voor persoonlijke aanspreking (WhatsApp, e-mail, over-mij) */
+    /** Voornaam voor persoonlijke aanspreking (WhatsApp, over-mij) */
     ownerName: "Nolie",
     /** Korte omschrijving voor footer en SEO */
     shortDescription:
@@ -40,9 +40,7 @@ export const siteContent = {
   contact: {
     phone: "+31 6 53356421",
     phoneLink: "+31653356421",
-    /** ← Vul e-mailadres in zodra het bekend is */
-    email: "",
-    emailLabel: "E-mailadres volgt binnenkort",
+    email: "nolieschmink@gmail.com",
     whatsappNumber: "31653356421",
     whatsappMessage:
       "Hallo Nolie, ik heb interesse in schminken voor een feestje of evenement. Ben je beschikbaar?",
@@ -52,9 +50,9 @@ export const siteContent = {
    * SEO / METADATA
    */
   seo: {
-    title: "Nolie Schmink | Schminken vanaf € 50 per uur",
+    title: "Nolie Schmink | Schminken op locatie in Veenendaal",
     description:
-      "Schminken voor feestjes en evenementen vanaf € 50 per uur. Bekijk het werk van Nadine en neem contact op.",
+      "Vrolijke schmink voor kinderfeestjes en evenementen. Bekijk het werk van Nadine en neem contact op.",
     locale: "nl_NL",
     language: "nl",
   },
@@ -102,6 +100,8 @@ export const siteContent = {
     title: "Mijn werk",
     subtitle:
       "Dit is een selectie van mijn werk. Een eigen idee of speciaal thema? Laat het gerust weten.",
+    consentNote:
+      "Ik maak alleen foto's van kinderen met toestemming van de ouders.",
     categories: [
       { id: "all", label: "Alles" },
       { id: "dieren", label: "Dieren" },
@@ -294,9 +294,13 @@ export const siteContent = {
    * ← Pas het uurtarief hier aan.
    */
   pricing: {
+    title: "Tarief",
+    subtitle:
+      "Ik doe dit met veel plezier — daarom reken ik een hobbytarief. Zo blijft schminken betaalbaar voor kinderfeestjes en andere leuke momenten.",
+    label: "Hobbytarief",
     hourlyRate: "€ 50",
     unit: "per uur",
-    note: "Op locatie. Neem contact op voor beschikbaarheid en een exacte prijsopgave.",
+    note: "Op locatie. Neem contact op voor beschikbaarheid en een prijsopgave op maat.",
   },
 
   /**
@@ -304,7 +308,7 @@ export const siteContent = {
    */
   nav: {
     links: [
-      { href: "#over-mij", label: "Over mij" },
+      { href: "/over-mij", label: "Over mij" },
       { href: "#portfolio", label: "Portfolio" },
       { href: "#contact", label: "Contact" },
     ],
@@ -316,15 +320,14 @@ export const siteContent = {
    */
   contactSection: {
     title: "Interesse?",
-    subtitle:
-      "Neem contact op via WhatsApp of bel me. Je e-mailadres volgt binnenkort ook op deze pagina.",
+    subtitle: "Neem contact op via WhatsApp, bel me of stuur een e-mail.",
   },
 
   /**
    * FOOTER
    */
   footer: {
-    tagline: "Schminken vanaf € 50 per uur · op locatie",
+    tagline: "Vrolijke schmink op locatie",
   },
 } as const;
 

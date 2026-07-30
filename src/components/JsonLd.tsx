@@ -14,13 +14,10 @@ export function JsonLd() {
     url: business.websiteUrl,
     areaServed: business.serviceArea,
     telephone: contact.phone,
+    email: contact.email,
     priceRange: "€50",
     image: `${business.websiteUrl}/images/nadine-at-work.jpg`,
   };
-
-  if (contact.email) {
-    data.email = contact.email;
-  }
 
   return (
     <script

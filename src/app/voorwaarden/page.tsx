@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: "Boekingen",
-    body: "Een boeking komt tot stand na een aanvraag via het contactformulier, e-mail, telefoon of WhatsApp, gevolgd door een bevestiging van beide kanten. Een aanvraag alleen is nog geen definitieve boeking.",
+    body: "Een boeking komt tot stand na een aanvraag via e-mail, telefoon of WhatsApp, gevolgd door een bevestiging van beide kanten. Een aanvraag alleen is nog geen definitieve boeking.",
   },
   {
     title: "Bevestiging",

@@ -4,7 +4,6 @@ import { siteContent } from "@/data/siteContent";
 export function Footer() {
   const { business, contact, pricing, footer } = siteContent;
   const year = new Date().getFullYear();
-  const hasEmail = contact.email.length > 0;
 
   return (
     <footer className="border-t border-lavender/30 bg-white">
@@ -14,8 +13,8 @@ export function Footer() {
             {business.name}
           </p>
           <p className="mt-1 text-sm text-ink-muted">{footer.tagline}</p>
-          <p className="mt-1 text-sm font-medium text-ink">
-            {pricing.hourlyRate} {pricing.unit}
+          <p className="mt-1 text-sm text-ink-muted">
+            {pricing.label}: {pricing.hourlyRate} {pricing.unit}
           </p>
         </div>
 
@@ -27,13 +26,9 @@ export function Footer() {
             <span className="text-ink-muted/70"> · bellen &amp; WhatsApp</span>
           </p>
           <p>
-            {hasEmail ? (
-              <a href={`mailto:${contact.email}`} className="hover:text-purple-deep">
-                {contact.email}
-              </a>
-            ) : (
-              contact.emailLabel
-            )}
+            <a href={`mailto:${contact.email}`} className="hover:text-purple-deep">
+              {contact.email}
+            </a>
           </p>
           <p>{business.serviceArea}</p>
           <div className="flex gap-4 pt-2">

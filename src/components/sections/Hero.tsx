@@ -2,7 +2,7 @@ import { siteContent } from "@/data/siteContent";
 import { SafeImage } from "@/components/SafeImage";
 
 export function Hero() {
-  const { hero, pricing } = siteContent;
+  const { hero } = siteContent;
 
   return (
     <section
@@ -16,19 +16,9 @@ export function Hero() {
             {hero.eyebrow}
           </p>
 
-          <div
-            className="mt-4 inline-block rounded-2xl bg-white px-6 py-5 shadow-sm ring-1 ring-lavender/40"
-            aria-label={`Tarief: ${pricing.hourlyRate} ${pricing.unit}`}
-          >
-            <p className="font-display text-5xl font-semibold text-purple-deep sm:text-6xl">
-              {pricing.hourlyRate}
-            </p>
-            <p className="mt-1 text-lg font-medium text-ink-muted">{pricing.unit}</p>
-          </div>
-
           <h1
             id="hero-title"
-            className="mt-6 font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl text-balance"
+            className="mt-4 font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl text-balance"
           >
             {hero.title}
           </h1>

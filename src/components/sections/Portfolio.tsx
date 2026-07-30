@@ -112,6 +112,10 @@ export function Portfolio() {
         ))}
       </ul>
 
+      <p className="mt-8 text-center text-sm text-ink-muted">
+        {portfolio.consentNote}
+      </p>
+
       {filtered.length === 0 && (
         <p className="py-12 text-center text-ink-muted">
           Geen afbeeldingen in deze categorie.

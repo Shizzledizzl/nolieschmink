@@ -6,7 +6,7 @@ import { siteContent } from "@/data/siteContent";
 
 export const metadata: Metadata = {
   title: "Privacyverklaring",
-  description: `Privacyverklaring van ${siteContent.business.name}. Lees hoe persoonsgegevens via het contactformulier worden verwerkt.`,
+  description: `Privacyverklaring van ${siteContent.business.name}. Lees hoe persoonsgegevens via contact worden verwerkt.`,
   alternates: { canonical: "/privacy" },
 };
 
@@ -43,8 +43,8 @@ export default function PrivacyPage() {
                 2. Welke gegevens worden gevraagd?
               </h2>
               <p className="mt-2">
-                Via het contactformulier kunnen de volgende gegevens worden
-                gevraagd:
+                Bij contact via WhatsApp, telefoon of e-mail kunnen de volgende gegevens
+                worden gedeeld:
               </p>
               <ul className="mt-2 list-disc space-y-1 pl-5">
                 <li>Naam</li>
@@ -93,7 +93,7 @@ export default function PrivacyPage() {
               <p className="mt-2">
                 Gegevens worden niet zonder reden aan derden verkocht of
                 verstrekt. Alleen als dat noodzakelijk is voor de dienstverlening
-                (bijvoorbeeld een e-mailprovider) of wanneer dat wettelijk
+                (bijvoorbeeld WhatsApp) of wanneer dat wettelijk
                 verplicht is, kunnen gegevens met een verwerker of autoriteit
                 worden gedeeld.
               </p>
