@@ -16,7 +16,7 @@ export function JsonLd() {
     telephone: contact.phone,
     email: contact.email,
     priceRange: "€50",
-    image: `${business.websiteUrl}/images/nadine-at-work.jpg`,
+    image: `${business.websiteUrl}${seo.ogImage}`,
   };
 
   return (

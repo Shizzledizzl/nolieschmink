@@ -6,7 +6,7 @@ import { siteContent } from "@/data/siteContent";
 
 export const metadata: Metadata = {
   title: "Schmink menu",
-  description: `${siteContent.schminkMenu.subtitle} Kies je favoriete schmink bij ${siteContent.business.name}.`,
+  description: siteContent.seo.pages.schminkMenu,
   alternates: { canonical: "/schmink-menu" },
 };
 

@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     description: seo.description,
     images: [
       {
-        url: "/images/nadine-at-work.jpg",
+        url: seo.ogImage,
         width: 1200,
         height: 630,
-        alt: `${business.name} – professionele schmink`,
+        alt: seo.ogImageAlt,
       },
     ],
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: seo.title,
     description: seo.description,
-    images: ["/images/nadine-at-work.jpg"],
+    images: [seo.ogImage],
   },
   robots: {
     index: true,

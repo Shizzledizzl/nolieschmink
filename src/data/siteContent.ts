@@ -25,12 +25,12 @@ export const siteContent = {
     ownerName: "Nolie",
     /** Korte omschrijving voor footer en SEO */
     shortDescription:
-      "Professionele en vrolijke schmink voor kinderfeestjes, scholen, verjaardagen en evenementen.",
+      "Schminkster op locatie in Veenendaal. Vrolijke schmink voor kinderfeestjes, verjaardagen en evenementen.",
     /** Geen KvK – leeg laten */
     kvkNumber: "",
     serviceArea: "Veenendaal en omstreken",
-    /** ← Vul website-URL in voor SEO (zonder slash aan het einde) */
-    websiteUrl: "https://www.voorbeeld.nl",
+    /** Live website-URL voor SEO, sitemap en linkpreviews (zonder slash aan het einde) */
+    websiteUrl: "https://nolieschmink.vercel.app",
   },
 
   /**
@@ -50,11 +50,22 @@ export const siteContent = {
    * SEO / METADATA
    */
   seo: {
-    title: "Nolie Schmink | Schminken op locatie in Veenendaal",
+    title: "Nolie Schmink | Schminkster op locatie in Veenendaal",
     description:
-      "Vrolijke schmink voor kinderfeestjes en evenementen. Bekijk het werk van Nadine en neem contact op.",
+      "Schminkster op locatie in Veenendaal en omstreken. Vrolijke schmink voor kinderfeestjes, verjaardagen en evenementen. Hobbytarief €50 per uur. Bekijk het portfolio en neem contact op.",
     locale: "nl_NL",
     language: "nl",
+    ogImage: "/images/nadine-over-mij.jpg",
+    ogImageAlt:
+      "Nadine schminkt een kind met huidvriendelijke schmink, schminkspullen op tafel",
+    pages: {
+      overMij:
+        "Leer Nadine kennen: schminkster uit Veenendaal. Huidvriendelijke schmink op locatie voor kinderfeestjes, verjaardagen en evenementen.",
+      portfolio:
+        "Schminkfoto's en armdesigns: dieren, prinsessen, helden, bloemen en glitter. Inspiratie voor je kinderfeestje in Veenendaal en omstreken.",
+      schminkMenu:
+        "Kies je favoriete schmink: dino, prinses, superhero en meer. Ideeën voor kinderfeestjes bij Nolie Schmink in Veenendaal.",
+    },
   },
 
   /**

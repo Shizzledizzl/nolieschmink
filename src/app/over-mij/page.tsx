@@ -6,7 +6,7 @@ import { siteContent } from "@/data/siteContent";
 
 export const metadata: Metadata = {
   title: "Over mij",
-  description: `${siteContent.about.title} – ${siteContent.business.name}, schminkster in ${siteContent.business.serviceArea}.`,
+  description: siteContent.seo.pages.overMij,
   alternates: { canonical: "/over-mij" },
 };
 

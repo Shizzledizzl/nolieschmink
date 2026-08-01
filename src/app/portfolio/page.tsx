@@ -6,7 +6,7 @@ import { siteContent, getPortfolioItems } from "@/data/siteContent";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: `Bekijk schminkfoto's en armdesigns van ${siteContent.business.name}.`,
+  description: siteContent.seo.pages.portfolio,
   alternates: { canonical: "/portfolio" },
 };
 
