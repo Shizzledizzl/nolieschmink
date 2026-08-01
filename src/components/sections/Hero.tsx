@@ -2,7 +2,7 @@ import { siteContent } from "@/data/siteContent";
 import { SafeImage } from "@/components/SafeImage";
 
 export function Hero() {
-  const { hero } = siteContent;
+  const { hero, pricing } = siteContent;
 
   return (
     <section
@@ -28,7 +28,7 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#portfolio"
+              href="#werk"
               className="inline-flex items-center justify-center rounded-full bg-purple-soft px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-purple-deep"
             >
               {hero.primaryCta}
@@ -39,6 +39,27 @@ export function Hero() {
             >
               {hero.secondaryCta}
             </a>
+          </div>
+
+          <div
+            className="mt-8 max-w-sm rounded-2xl bg-white px-5 py-4 shadow-sm ring-1 ring-lavender/40"
+            aria-label={`${pricing.label}: ${pricing.hourlyRate} ${pricing.unit}`}
+          >
+            <p className="text-xs font-semibold uppercase tracking-wide text-purple-soft">
+              {pricing.title}
+            </p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-muted">
+              {pricing.subtitle}
+            </p>
+            <p className="mt-3 text-sm font-semibold text-purple-soft">
+              {pricing.label}
+            </p>
+            <p className="font-display text-3xl font-semibold text-purple-deep">
+              {pricing.hourlyRate}
+              <span className="ml-1 text-base font-medium text-ink-muted">
+                {pricing.unit}
+              </span>
+            </p>
           </div>
         </div>
 

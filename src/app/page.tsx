@@ -1,8 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { Portfolio } from "@/components/sections/Portfolio";
-import { Pricing } from "@/components/sections/Pricing";
+import { WorkPreview } from "@/components/sections/WorkPreview";
 import { Contact } from "@/components/sections/Contact";
 import { JsonLd } from "@/components/JsonLd";
 
@@ -13,8 +12,7 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
-        <Portfolio />
-        <Pricing />
+        <WorkPreview />
         <Contact />
       </main>
       <Footer />
