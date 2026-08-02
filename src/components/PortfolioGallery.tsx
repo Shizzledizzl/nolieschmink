@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
-import { X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import {
   siteContent,
   getPortfolioItems,
@@ -26,7 +26,7 @@ type PortfolioGalleryProps = {
   viewAllHref?: string;
   showItemLabels?: boolean;
   showLightboxDetails?: boolean;
-  layout?: "grid" | "homepage";
+  layout?: "grid" | "homepage" | "grouped";
   className?: string;
 };
 
@@ -51,11 +51,13 @@ function GalleryPhoto({
   onOpen: (index: number) => void;
   showItemLabels: boolean;
 }) {
+  const isArmDesign = item.category === "armdesigns";
+
   return (
     <button
       type="button"
       onClick={() => onOpen(index)}
-      className="group relative block w-full overflow-hidden rounded-2xl shadow-sm shadow-purple-soft/10 transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-soft"
+      className="group relative block w-full overflow-hidden rounded-2xl bg-white shadow-sm shadow-purple-soft/10 transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-soft"
       aria-label={
         showItemLabels
           ? `Vergroot afbeelding: ${item.title}`
@@ -63,15 +65,20 @@ function GalleryPhoto({
       }
     >
       <div
-        className="relative aspect-square"
-        style={{ position: "relative", aspectRatio: "1 / 1" }}
+        className={`relative ${isArmDesign ? "aspect-[4/3]" : "aspect-square"}`}
+        style={{
+          position: "relative",
+          aspectRatio: isArmDesign ? "4 / 3" : "1 / 1",
+        }}
       >
         <SafeImage
           src={item.src}
           alt={showItemLabels ? item.alt : ""}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className={`transition-transform duration-500 group-hover:scale-105 ${
+            isArmDesign ? "object-contain" : "object-cover"
+          }`}
           placeholderColor="#7ec8c0"
         />
       </div>
@@ -81,6 +88,67 @@ function GalleryPhoto({
         </span>
       )}
     </button>
+  );
+}
+
+const INITIAL_VISIBLE = 4;
+
+function CategoryGallerySection({
+  group,
+  startIndex,
+  onOpen,
+  showItemLabels,
+}: {
+  group: { id: string; label: string; items: GalleryItem[] };
+  startIndex: number;
+  onOpen: (index: number) => void;
+  showItemLabels: boolean;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = group.items.length > INITIAL_VISIBLE;
+
+  return (
+    <section aria-labelledby={`gallery-${group.id}`}>
+      <h3
+        id={`gallery-${group.id}`}
+        className="mb-4 font-display text-xl font-semibold text-purple-deep sm:text-2xl"
+      >
+        {group.label}
+      </h3>
+      <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+        {group.items.map((item, i) => (
+          <li
+            key={item.id}
+            className={
+              i >= INITIAL_VISIBLE && !expanded ? "hidden md:list-item" : undefined
+            }
+          >
+            <GalleryPhoto
+              item={item}
+              index={startIndex + i}
+              onOpen={onOpen}
+              showItemLabels={showItemLabels}
+            />
+          </li>
+        ))}
+      </ul>
+      {hasMore && (
+        <button
+          type="button"
+          onClick={() => setExpanded((open) => !open)}
+          className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-xl bg-lavender/20 px-4 py-2.5 text-sm font-semibold text-purple-deep transition-colors hover:bg-lavender/35 md:hidden"
+          aria-expanded={expanded}
+        >
+          {expanded
+            ? "Toon minder"
+            : `Toon meer (${group.items.length - INITIAL_VISIBLE})`}
+          <ChevronDown
+            className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`}
+            aria-hidden
+          />
+        </button>
+      )}
+    </section>
   );
 }
 
@@ -111,13 +179,31 @@ export function PortfolioGallery({
   const itemPool = galleryItems ?? getPortfolioItems();
   const baseItems = resolveItems(itemIds, itemPool);
 
-  const filtered =
-    !showCategories || activeCategory === "all"
-      ? baseItems
-      : baseItems.filter((item) => item.category === activeCategory);
-
   const categorySource =
     galleryCategories ?? siteContent.portfolio.portfolioCategories;
+
+  const groupedCategories =
+    layout === "grouped"
+      ? categorySource
+          .filter((cat) => cat.id !== "all")
+          .map((cat) => ({
+            ...cat,
+            items: baseItems.filter((item) => item.category === cat.id),
+          }))
+          .filter((group) => group.items.length > 0)
+      : [];
+
+  const groupedFlatItems =
+    layout === "grouped"
+      ? groupedCategories.flatMap((group) => group.items)
+      : [];
+
+  const filtered =
+    layout === "grouped"
+      ? groupedFlatItems
+      : !showCategories || activeCategory === "all"
+        ? baseItems
+        : baseItems.filter((item) => item.category === activeCategory);
 
   const categories = showCategories
     ? categorySource
@@ -181,7 +267,7 @@ export function PortfolioGallery({
     >
       <SectionHeading id={`${sectionId}-title`} title={title} subtitle={subtitle} />
 
-      {showCategories && categories.length > 1 && (
+      {showCategories && layout !== "grouped" && categories.length > 1 && (
         <div
           className="mb-8 flex flex-wrap justify-center gap-2"
           role="tablist"
@@ -225,33 +311,76 @@ export function PortfolioGallery({
           </ul>
 
           {(bottomLeft || bottomRight || viewAllButton) && (
-            <div className="grid gap-4 sm:grid-cols-3 sm:items-center">
-              <div>{bottomLeft && (
-                <GalleryPhoto
-                  item={bottomLeft}
-                  index={3}
-                  onOpen={openLightbox}
-                  showItemLabels={showItemLabels}
-                />
-              )}</div>
-              <div className="flex justify-center py-2 sm:py-0">{viewAllButton}</div>
-              <div>{bottomRight && (
-                <GalleryPhoto
-                  item={bottomRight}
-                  index={4}
-                  onOpen={openLightbox}
-                  showItemLabels={showItemLabels}
-                />
-              )}</div>
-            </div>
+            <>
+              <div className="grid gap-4 sm:hidden">
+                {bottomLeft && (
+                  <GalleryPhoto
+                    item={bottomLeft}
+                    index={3}
+                    onOpen={openLightbox}
+                    showItemLabels={showItemLabels}
+                  />
+                )}
+                {bottomRight && (
+                  <GalleryPhoto
+                    item={bottomRight}
+                    index={4}
+                    onOpen={openLightbox}
+                    showItemLabels={showItemLabels}
+                  />
+                )}
+                {viewAllButton && (
+                  <div className="flex justify-center pt-2">{viewAllButton}</div>
+                )}
+              </div>
+
+              <div className="hidden gap-4 sm:grid sm:grid-cols-3 sm:items-center">
+                <div>
+                  {bottomLeft && (
+                    <GalleryPhoto
+                      item={bottomLeft}
+                      index={3}
+                      onOpen={openLightbox}
+                      showItemLabels={showItemLabels}
+                    />
+                  )}
+                </div>
+                <div className="flex justify-center">{viewAllButton}</div>
+                <div>
+                  {bottomRight && (
+                    <GalleryPhoto
+                      item={bottomRight}
+                      index={4}
+                      onOpen={openLightbox}
+                      showItemLabels={showItemLabels}
+                    />
+                  )}
+                </div>
+              </div>
+            </>
           )}
         </div>
+      ) : layout === "grouped" ? (
+        <div className="space-y-12">
+          {(() => {
+            let itemOffset = 0;
+            return groupedCategories.map((group) => {
+              const startIndex = itemOffset;
+              itemOffset += group.items.length;
+              return (
+                <CategoryGallerySection
+                  key={group.id}
+                  group={group}
+                  startIndex={startIndex}
+                  onOpen={openLightbox}
+                  showItemLabels={showItemLabels}
+                />
+              );
+            });
+          })()}
+        </div>
       ) : (
-        <ul
-          className={`grid gap-4 ${
-            itemIds ? "sm:grid-cols-3" : "sm:grid-cols-2 lg:grid-cols-4"
-          }`}
-        >
+        <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
           {filtered.map((item, index) => (
             <li key={item.id}>
               <GalleryPhoto

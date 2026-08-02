@@ -42,8 +42,6 @@ export const siteContent = {
     phoneLink: "+31653356421",
     email: "nolieschmink@gmail.com",
     whatsappNumber: "31653356421",
-    whatsappMessage:
-      "Hallo Nolie, ik heb interesse in schminken voor een feestje of evenement. Ben je beschikbaar?",
   },
 
   /**
@@ -544,12 +542,11 @@ export function getPortfolioItems(): GalleryItem[] {
 }
 
 /**
- * Bouwt een WhatsApp-URL met optionele datum in het bericht.
+ * Bouwt een WhatsApp-URL zonder vooraf ingevuld bericht.
  */
 export function getWhatsAppUrl(): string {
   const number = siteContent.contact.whatsappNumber.replace(/\D/g, "");
-  const message = siteContent.contact.whatsappMessage;
-  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${number}`;
 }
 
 /**

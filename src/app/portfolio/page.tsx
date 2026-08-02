@@ -23,7 +23,7 @@ export default function PortfolioPage() {
           subtitle={portfolio.pageSubtitle}
           galleryItems={getPortfolioItems()}
           galleryCategories={portfolio.portfolioCategories}
-          showCategories
+          layout="grouped"
           showConsentNote
           className="border-t border-lavender/30 bg-surface-alt/40"
         />
