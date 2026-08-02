@@ -121,9 +121,10 @@ export const siteContent = {
     ],
     menuCategories: [
       { id: "dieren", label: "Dieren" },
-      { id: "prinsessen", label: "Prinsessen en helden" },
-      { id: "bloemen", label: "Bloemen en glitter" },
-      { id: "diversen", label: "Diversen" },
+      { id: "prinsessen", label: "Prinsessen fantasie" },
+      { id: "bloemen", label: "Bloemen en glitters" },
+      { id: "thema", label: "Thema" },
+      { id: "helden", label: "Helden en figuren" },
     ],
     items: [
       {
@@ -185,16 +186,16 @@ export const siteContent = {
       {
         id: "draak",
         title: "Draak",
-        category: "prinsessen",
+        category: "dieren",
         src: "/images/schmink-draak-oefen.jpg",
         alt: "Groene vuurspuwende draak-schmink met vleugels en schubben op oefengezicht",
       },
       {
         id: "fee",
-        title: "Fee",
+        title: "Konijn",
         category: "prinsessen",
         src: "/images/schmink-fee.jpg",
-        alt: "Roze en wit fee-ontwerp met bloemblaadjes en sterretjes",
+        alt: "Roze en wit konijn-schmink met oortjes en sterretjes op oefengezicht",
       },
       {
         id: "blauwe-prinses",
@@ -206,9 +207,9 @@ export const siteContent = {
       {
         id: "superheld",
         title: "Batman",
-        category: "prinsessen",
-        src: "/images/schmink-superheld.jpg",
-        alt: "Jongen met Batman-schmink: zwart vleermuisembleem met oranje zonsondergang op het voorhoofd",
+        category: "helden",
+        src: "/images/schmink-batman-oefen.jpg",
+        alt: "Batman-schmink op oefengezicht: zwart vleermuisembleem met oranje gloed en sterretjes",
       },
       {
         id: "rozen-vine",
@@ -219,8 +220,8 @@ export const siteContent = {
       },
       {
         id: "hart",
-        title: "Hart",
-        category: "bloemen",
+        title: "Hart rood",
+        category: "prinsessen",
         src: "/images/schmink-hart.jpg",
         alt: "Rood-wit hartenschemink op het voorhoofd met swirls en sterretjes",
       },
@@ -234,35 +235,35 @@ export const siteContent = {
       {
         id: "minnie",
         title: "Minnie Mouse",
-        category: "diversen",
+        category: "helden",
         src: "/images/schmink-minnie-oefen.jpg",
         alt: "Minnie Mouse-schmink op oefengezicht: rode strik met stippen, oortjes en snorharen",
       },
       {
         id: "halloween",
-        title: "Halloween",
-        category: "diversen",
+        title: "Halloween paars",
+        category: "thema",
         src: "/images/schmink-halloween.jpg",
-        alt: "Paars spinnenweb-schmink met spin op het voorhoofd",
+        alt: "Paars spinnenweb-schmink met spin op oefengezicht",
       },
       {
         id: "pikachu",
         title: "Pikachu",
-        category: "diversen",
+        category: "helden",
         src: "/images/schmink-pikachu.jpg",
-        alt: "Pikachu-schmink op het voorhoofd met Pokéball en bliksemflits",
+        alt: "Pikachu-schmink op oefengezicht met Pokéball en bliksemflits",
       },
       {
         id: "voetbal",
         title: "Voetbal",
-        category: "diversen",
+        category: "thema",
         src: "/images/schmink-voetbal.jpg",
-        alt: "Voetbal-schmink op de wang met vlammen",
+        alt: "Voetbal-schmink op oefengezicht met vlammen",
       },
       {
         id: "spiderman-oefen",
         title: "Spider-Man",
-        category: "prinsessen",
+        category: "helden",
         src: "/images/schmink-spiderman-oefen.jpg",
         alt: "Spider-Man-schmink op oefengezicht met webpatroon",
       },
@@ -275,15 +276,15 @@ export const siteContent = {
       },
       {
         id: "spin-oefen",
-        title: "Spin en web",
-        category: "diversen",
+        title: "Spinnenweb",
+        category: "thema",
         src: "/images/schmink-spin-oefen.jpg",
         alt: "Zwarte spin met wit spinnenweb op oefengezicht",
       },
       {
         id: "vlinder-oefen",
         title: "Vlinder",
-        category: "bloemen",
+        category: "dieren",
         src: "/images/schmink-vlinder-oefen.jpg",
         alt: "Roze-oranje vlinder-schmink met swirls en zwarte accenten op oefengezicht",
       },
@@ -339,7 +340,7 @@ export const siteContent = {
       {
         id: "hulk-oefen",
         title: "Hulk",
-        category: "prinsessen",
+        category: "helden",
         src: "/images/schmink-hulk-oefen.jpg",
         alt: "Groene Hulk-schmink op oefengezicht met spierarmen",
       },
@@ -373,7 +374,7 @@ export const siteContent = {
       },
       {
         id: "regenboogbloem-oefen",
-        title: "Regenboogbloem",
+        title: "Regenboog bloem",
         category: "bloemen",
         src: "/images/schmink-regenboogbloem-oefen.jpg",
         alt: "Regenboogbloem-schmink op oefengezicht met roze bloem en swirls",
@@ -406,6 +407,58 @@ export const siteContent = {
         src: "/images/schmink-arm-rozen-regenboog.jpg",
         alt: "Twee armen met roze rozen en regenboog-armdesigns",
       },
+      {
+        id: "sonic-oefen",
+        title: "Sonic",
+        category: "helden",
+        src: "/images/schmink-sonic-oefen.jpg",
+        alt: "Blauwe Sonic the Hedgehog-schmink op oefengezicht",
+      },
+      {
+        id: "hart-neon-oefen",
+        title: "Hart neon",
+        category: "prinsessen",
+        src: "/images/schmink-hart-neon-oefen.jpg",
+        alt: "Neon roze-oranje hart-schmink met swirls en steentjes op oefengezicht",
+      },
+      {
+        id: "regenboog-swirl-oefen",
+        title: "Regenboog swirl",
+        category: "bloemen",
+        src: "/images/schmink-regenboog-swirl-oefen.jpg",
+        alt: "Witte bloem met oranje, geel en turkoois swirls op oefengezicht",
+      },
+      {
+        id: "paarse-bloem-oefen",
+        title: "Paarse bloem",
+        category: "prinsessen",
+        src: "/images/schmink-paarse-bloem-oefen.jpg",
+        alt: "Paarse bloemkroon-schmink met roze accenten en glitter op oefengezicht",
+      },
+      {
+        id: "flamingo-reserve",
+        title: "Flamingo",
+        category: "dieren",
+        src: "",
+        alt: "Flamingo-schmink — binnenkort beschikbaar",
+        comingSoon: true,
+      },
+      {
+        id: "schildpad-reserve",
+        title: "Schildpad",
+        category: "dieren",
+        src: "",
+        alt: "Schildpad-schmink — binnenkort beschikbaar",
+        comingSoon: true,
+      },
+      {
+        id: "hello-kitty-reserve",
+        title: "Hello Kitty",
+        category: "helden",
+        src: "",
+        alt: "Hello Kitty-schmink — binnenkort beschikbaar",
+        comingSoon: true,
+      },
     ],
   },
 
@@ -436,6 +489,63 @@ export const siteContent = {
     intro:
       "Kies een design dat je leuk vindt. Dit zijn voorbeelden op een oefengezicht — zo zie je hoe het eruit kan zien!",
     tip: "Heb je een eigen idee? Dat mag ook — alles is bespreekbaar.",
+    categories: [
+      {
+        id: "dieren",
+        label: "Dieren",
+        itemIds: [
+          "octopus",
+          "vos",
+          "tijger-oefen",
+          "dino-oefen",
+          "draak",
+          "vlinder-oefen",
+          "flamingo-reserve",
+          "schildpad-reserve",
+        ],
+      },
+      {
+        id: "prinsessen",
+        label: "Prinsessen fantasie",
+        itemIds: [
+          "fee",
+          "blauwe-prinses",
+          "eenhoorn-oefen",
+          "fantasiekroon-oefen",
+          "hart",
+          "hart-neon-oefen",
+          "paarse-bloem-oefen",
+        ],
+      },
+      {
+        id: "bloemen",
+        label: "Bloemen en glitters",
+        itemIds: [
+          "rozen-vine",
+          "paarse-ros",
+          "regenboog-swirl-oefen",
+          "regenboogbloem-oefen",
+        ],
+      },
+      {
+        id: "thema",
+        label: "Thema",
+        itemIds: ["halloween", "spin-oefen", "voetbal"],
+      },
+      {
+        id: "helden",
+        label: "Helden en figuren",
+        itemIds: [
+          "minnie",
+          "sonic-oefen",
+          "pikachu",
+          "spiderman-oefen",
+          "superheld",
+          "hulk-oefen",
+          "hello-kitty-reserve",
+        ],
+      },
+    ],
   },
 
   /**
@@ -483,7 +593,12 @@ export const siteContent = {
 
 export type SiteContent = typeof siteContent;
 export type PortfolioItemKind = "oefengezicht" | "arm" | "gezicht";
-export type MenuThemeId = "dieren" | "prinsessen" | "bloemen" | "diversen";
+export type MenuThemeId =
+  | "dieren"
+  | "prinsessen"
+  | "bloemen"
+  | "thema"
+  | "helden";
 export type PortfolioCategoryId =
   | "all"
   | "armdesigns"
@@ -521,12 +636,22 @@ export type PortfolioItem = (typeof siteContent.portfolio.items)[number];
 
 export type GalleryItem = Omit<PortfolioItem, "category"> & {
   category: PortfolioCategoryId | MenuThemeId;
+  comingSoon?: boolean;
 };
 
 export function getMenuItems(): GalleryItem[] {
-  return siteContent.portfolio.items.filter(
-    (item) => getItemKind(item.id) === "oefengezicht"
-  ) as GalleryItem[];
+  const pool = new Map(
+    siteContent.portfolio.items
+      .filter((item) => getItemKind(item.id) === "oefengezicht")
+      .map((item) => [item.id, item as GalleryItem])
+  );
+
+  return siteContent.schminkMenu.categories.flatMap((cat) =>
+    cat.itemIds
+      .map((id) => pool.get(id))
+      .filter((item): item is GalleryItem => item !== undefined)
+      .map((item) => ({ ...item, category: cat.id as MenuThemeId }))
+  );
 }
 
 export function getPortfolioItems(): GalleryItem[] {

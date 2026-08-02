@@ -17,12 +17,10 @@ type MenuCategoryGroup = {
 
 function MenuCategorySection({
   group,
-  startIndex,
   onOpenLightbox,
 }: {
   group: MenuCategoryGroup;
-  startIndex: number;
-  onOpenLightbox: (index: number) => void;
+  onOpenLightbox: (itemId: string) => void;
 }) {
   const [expanded, setExpanded] = useState(false);
   const hasMore = group.items.length > INITIAL_VISIBLE;
@@ -43,28 +41,44 @@ function MenuCategorySection({
               i >= INITIAL_VISIBLE && !expanded ? "hidden md:list-item" : undefined
             }
           >
-            <button
-              type="button"
-              onClick={() => onOpenLightbox(startIndex + i)}
-              className="group flex w-full flex-col overflow-hidden rounded-2xl bg-white text-left shadow-sm ring-1 ring-lavender/30 transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-soft"
-            >
-              <div
-                className="relative aspect-square"
-                style={{ position: "relative", aspectRatio: "1 / 1" }}
-              >
-                <SafeImage
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  placeholderColor="#c9b8e0"
-                />
+            {"comingSoon" in item && item.comingSoon ? (
+              <div className="flex w-full flex-col overflow-hidden rounded-2xl bg-white text-left shadow-sm ring-1 ring-lavender/30 ring-dashed">
+                <div
+                  className="relative flex aspect-square items-center justify-center bg-lavender/15"
+                  style={{ aspectRatio: "1 / 1" }}
+                >
+                  <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-purple-deep">
+                    Binnenkort
+                  </span>
+                </div>
+                <span className="px-3 py-2.5 text-sm font-semibold text-ink-muted">
+                  {item.title}
+                </span>
               </div>
-              <span className="px-3 py-2.5 text-sm font-semibold text-ink">
-                {item.title}
-              </span>
-            </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => onOpenLightbox(item.id)}
+                className="group flex w-full flex-col overflow-hidden rounded-2xl bg-white text-left shadow-sm ring-1 ring-lavender/30 transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-soft"
+              >
+                <div
+                  className="relative aspect-square"
+                  style={{ position: "relative", aspectRatio: "1 / 1" }}
+                >
+                  <SafeImage
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    placeholderColor="#c9b8e0"
+                  />
+                </div>
+                <span className="px-3 py-2.5 text-sm font-semibold text-ink">
+                  {item.title}
+                </span>
+              </button>
+            )}
           </li>
         ))}
       </ul>
@@ -96,15 +110,19 @@ export function SchminkMenu() {
   const dialogTitleId = useId();
 
   const menuItems = getMenuItems();
-  const categories = siteContent.portfolio.menuCategories;
-  const itemsByCategory = categories.map((cat) => ({
+  const itemsByCategory = siteContent.schminkMenu.categories.map((cat) => ({
     ...cat,
     items: menuItems.filter((item) => item.category === cat.id),
   }));
 
-  const flatItems = itemsByCategory.flatMap((group) => group.items);
+  const flatItems = itemsByCategory.flatMap((group) =>
+    group.items.filter((item) => !("comingSoon" in item && item.comingSoon))
+  );
 
-  const openLightbox = (index: number) => setLightboxIndex(index);
+  const openLightbox = (itemId: string) => {
+    const index = flatItems.findIndex((item) => item.id === itemId);
+    if (index >= 0) setLightboxIndex(index);
+  };
   const closeLightbox = useCallback(() => setLightboxIndex(null), []);
 
   useEffect(() => {
@@ -126,8 +144,6 @@ export function SchminkMenu() {
   const activeItem =
     lightboxIndex !== null ? flatItems[lightboxIndex] : null;
 
-  let itemOffset = 0;
-
   return (
     <Section id="schmink-menu" ariaLabelledBy="schmink-menu-title">
       <SectionHeading
@@ -143,14 +159,11 @@ export function SchminkMenu() {
       <div className="space-y-12">
         {itemsByCategory.map((group) => {
           if (group.items.length === 0) return null;
-          const startIndex = itemOffset;
-          itemOffset += group.items.length;
 
           return (
             <MenuCategorySection
               key={group.id}
               group={group}
-              startIndex={startIndex}
               onOpenLightbox={openLightbox}
             />
           );
