@@ -171,18 +171,11 @@ export const siteContent = {
         alt: "Jongen met oranje draak-schmink op het voorhoofd met vlammen",
       },
       {
-        id: "flamingo",
-        title: "Flamingo",
-        category: "dieren",
-        src: "/images/schmink-vlinder.jpg",
-        alt: "Meisje met roze flamingo-schmink op het voorhoofd en glittersteentjes op de neusbrug",
-      },
-      {
         id: "octopus",
         title: "Octopus",
         category: "dieren",
-        src: "/images/schmink-octopus.jpg",
-        alt: "Blauwe octopus-schmink met tentakels en witte bubbelaccenten",
+        src: "/images/schmink-octopus-oefen.jpg",
+        alt: "Blauwe octopus-schmink met tentakels, bubbels en glitters op oefengezicht",
       },
       {
         id: "vos",
@@ -192,18 +185,11 @@ export const siteContent = {
         alt: "Oranje vos-schmink met oortjes op het voorhoofd en neusje",
       },
       {
-        id: "prinses-kroon",
-        title: "Prinsessenkroon",
-        category: "prinsessen",
-        src: "/images/schmink-prinses-kroon.jpg",
-        alt: "Paarse prinsessenkroon met witte bloemblaadjes en goudgele accenten",
-      },
-      {
         id: "draak",
         title: "Draak",
         category: "prinsessen",
-        src: "/images/schmink-draak.jpg",
-        alt: "Groene drakenschemink met vleugels, schubben en vuur op het voorhoofd",
+        src: "/images/schmink-draak-oefen.jpg",
+        alt: "Groene vuurspuwende draak-schmink met vleugels en schubben op oefengezicht",
       },
       {
         id: "fee",
@@ -234,13 +220,6 @@ export const siteContent = {
         alt: "Roze rozenrank-schmink met bloemen en groene bladeren langs de wang",
       },
       {
-        id: "bloem-swirls",
-        title: "Bloemensierlijk",
-        category: "bloemen",
-        src: "/images/schmink-bloem-swirls.jpg",
-        alt: "Sierlijke bloemenschemink in roze en wit met swirls en glitter",
-      },
-      {
         id: "hart",
         title: "Hart",
         category: "bloemen",
@@ -258,8 +237,8 @@ export const siteContent = {
         id: "minnie",
         title: "Minnie Mouse",
         category: "diversen",
-        src: "/images/schmink-minnie.jpg",
-        alt: "Meisje met Minnie Mouse-schmink: rode strik met stippen, oortjes en roze wangen",
+        src: "/images/schmink-minnie-oefen.jpg",
+        alt: "Minnie Mouse-schmink op oefengezicht: rode strik met stippen, oortjes en snorharen",
       },
       {
         id: "halloween",
@@ -302,6 +281,13 @@ export const siteContent = {
         category: "diversen",
         src: "/images/schmink-spin-oefen.jpg",
         alt: "Zwarte spin met wit spinnenweb op oefengezicht",
+      },
+      {
+        id: "vlinder-oefen",
+        title: "Vlinder",
+        category: "bloemen",
+        src: "/images/schmink-vlinder-oefen.jpg",
+        alt: "Roze-oranje vlinder-schmink met swirls en zwarte accenten op oefengezicht",
       },
       {
         id: "arm-rozen-lang",
@@ -351,13 +337,6 @@ export const siteContent = {
         category: "dieren",
         src: "/images/schmink-vos-meisje.jpg",
         alt: "Meisje met oranje vos-schmink, oortjes en zwarte neus",
-      },
-      {
-        id: "minnie-meisje",
-        title: "Minnie Mouse",
-        category: "diversen",
-        src: "/images/schmink-minnie-meisje.jpg",
-        alt: "Meisje met Minnie Mouse-schmink: oortjes, strik en roze wangen",
       },
       {
         id: "hulk-oefen",
@@ -531,12 +510,9 @@ const itemKinds: Record<string, PortfolioItemKind> = {
   hulk: "gezicht",
   "ijskoningin-meisje": "gezicht",
   "draak-jongen": "gezicht",
-  flamingo: "gezicht",
   "draak-jongen-groen": "gezicht",
   "vos-meisje": "gezicht",
-  "minnie-meisje": "gezicht",
   "fantasiekroon-meisje": "gezicht",
-  superheld: "gezicht",
 };
 
 export function getItemKind(id: string): PortfolioItemKind {

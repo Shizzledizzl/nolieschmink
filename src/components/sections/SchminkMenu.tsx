@@ -1,10 +1,93 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
-import { X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import { siteContent, getMenuItems } from "@/data/siteContent";
+import type { GalleryItem, MenuThemeId } from "@/data/siteContent";
 import { SafeImage } from "@/components/SafeImage";
 import { Section, SectionHeading } from "@/components/ui/Section";
+
+const INITIAL_VISIBLE = 4;
+
+type MenuCategoryGroup = {
+  id: MenuThemeId;
+  label: string;
+  items: GalleryItem[];
+};
+
+function MenuCategorySection({
+  group,
+  startIndex,
+  onOpenLightbox,
+}: {
+  group: MenuCategoryGroup;
+  startIndex: number;
+  onOpenLightbox: (index: number) => void;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = group.items.length > INITIAL_VISIBLE;
+
+  return (
+    <section aria-labelledby={`menu-${group.id}`}>
+      <h3
+        id={`menu-${group.id}`}
+        className="mb-4 font-display text-xl font-semibold text-purple-deep sm:text-2xl"
+      >
+        {group.label}
+      </h3>
+      <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+        {group.items.map((item, i) => (
+          <li
+            key={item.id}
+            className={
+              i >= INITIAL_VISIBLE && !expanded ? "hidden md:list-item" : undefined
+            }
+          >
+            <button
+              type="button"
+              onClick={() => onOpenLightbox(startIndex + i)}
+              className="group flex w-full flex-col overflow-hidden rounded-2xl bg-white text-left shadow-sm ring-1 ring-lavender/30 transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-soft"
+            >
+              <div
+                className="relative aspect-square"
+                style={{ position: "relative", aspectRatio: "1 / 1" }}
+              >
+                <SafeImage
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  placeholderColor="#c9b8e0"
+                />
+              </div>
+              <span className="px-3 py-2.5 text-sm font-semibold text-ink">
+                {item.title}
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
+      {hasMore && (
+        <button
+          type="button"
+          onClick={() => setExpanded((open) => !open)}
+          className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-xl bg-lavender/20 px-4 py-2.5 text-sm font-semibold text-purple-deep transition-colors hover:bg-lavender/35 md:hidden"
+          aria-expanded={expanded}
+          aria-controls={`menu-grid-${group.id}`}
+        >
+          {expanded
+            ? "Toon minder"
+            : `Toon meer (${group.items.length - INITIAL_VISIBLE})`}
+          <ChevronDown
+            className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`}
+            aria-hidden
+          />
+        </button>
+      )}
+    </section>
+  );
+}
 
 export function SchminkMenu() {
   const { schminkMenu } = siteContent;
@@ -64,42 +147,12 @@ export function SchminkMenu() {
           itemOffset += group.items.length;
 
           return (
-            <section key={group.id} aria-labelledby={`menu-${group.id}`}>
-              <h3
-                id={`menu-${group.id}`}
-                className="mb-4 font-display text-xl font-semibold text-purple-deep sm:text-2xl"
-              >
-                {group.label}
-              </h3>
-              <ul className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {group.items.map((item, i) => (
-                  <li key={item.id}>
-                    <button
-                      type="button"
-                      onClick={() => openLightbox(startIndex + i)}
-                      className="group flex w-full flex-col overflow-hidden rounded-2xl bg-white text-left shadow-sm ring-1 ring-lavender/30 transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-soft"
-                    >
-                      <div
-                        className="relative aspect-square"
-                        style={{ position: "relative", aspectRatio: "1 / 1" }}
-                      >
-                        <SafeImage
-                          src={item.src}
-                          alt={item.alt}
-                          fill
-                          sizes="(max-width: 640px) 50vw, 25vw"
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          placeholderColor="#c9b8e0"
-                        />
-                      </div>
-                      <span className="px-3 py-2.5 text-sm font-semibold text-ink">
-                        {item.title}
-                      </span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            <MenuCategorySection
+              key={group.id}
+              group={group}
+              startIndex={startIndex}
+              onOpenLightbox={openLightbox}
+            />
           );
         })}
       </div>
