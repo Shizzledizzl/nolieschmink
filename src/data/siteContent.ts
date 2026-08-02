@@ -77,8 +77,8 @@ export const siteContent = {
     secondaryCta: "Neem contact op",
     eyebrow: "Nolie Schmink",
     image: {
-      src: "/images/nadine-at-work.jpg",
-      alt: "Vrolijk meisje met professionele roze en witte bloemenschemink op haar voorhoofd",
+      src: "/images/hero-schmink.jpg",
+      alt: "Vrolijk meisje met ijskoningin-schmink, blauwe glitter en tiara",
     },
   },
 
