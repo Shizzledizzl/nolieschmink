@@ -6,7 +6,7 @@ import { siteContent } from "@/data/siteContent";
 
 export const metadata: Metadata = {
   title: "Algemene en annuleringsvoorwaarden",
-  description: `Algemene en annuleringsvoorwaarden van ${siteContent.business.name}. Concepttekst – ter controle en aanpassing.`,
+  description: `Algemene en annuleringsvoorwaarden van ${siteContent.business.name}.`,
   alternates: { canonical: "/voorwaarden" },
 };
 
@@ -73,15 +73,6 @@ export default function TermsPage() {
           <p className="mt-4 text-sm text-ink-muted">
             Laatst bijgewerkt: juli 2026
           </p>
-
-          <aside
-            className="mt-6 rounded-2xl border border-peach/50 bg-peach/20 px-4 py-4 text-sm leading-relaxed text-ink"
-            role="note"
-          >
-            <strong>Concepttekst.</strong> Deze voorwaarden zijn een voorbeeld
-            en moeten door {siteContent.business.ownerName} worden gecontroleerd en aangepast voordat ze
-            als definitief worden gebruikt. Dit is geen juridisch advies.
-          </aside>
 
           <div className="mt-10 space-y-8">
             {sections.map((section, i) => (

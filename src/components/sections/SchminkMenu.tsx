@@ -2,8 +2,8 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { ChevronDown, X } from "lucide-react";
-import { siteContent, getMenuItems } from "@/data/siteContent";
-import type { GalleryItem, MenuThemeId } from "@/data/siteContent";
+import { siteContent, getMenuItems, type GalleryItem, type MenuThemeId } from "@/data/siteContent";
+import type { PortfolioItem } from "@/lib/portfolio-types";
 import { SafeImage } from "@/components/SafeImage";
 import { Section, SectionHeading } from "@/components/ui/Section";
 
@@ -62,15 +62,20 @@ function MenuCategorySection({
                 className="group flex w-full flex-col overflow-hidden rounded-2xl bg-white text-left shadow-sm ring-1 ring-lavender/30 transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-soft"
               >
                 <div
-                  className="relative aspect-square"
-                  style={{ position: "relative", aspectRatio: "1 / 1" }}
+                  className={`relative ${group.id === "armdesigns" ? "aspect-[4/3]" : "aspect-square"}`}
+                  style={{
+                    position: "relative",
+                    aspectRatio: group.id === "armdesigns" ? "4 / 3" : "1 / 1",
+                  }}
                 >
                   <SafeImage
                     src={item.src}
                     alt={item.alt}
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`transition-transform duration-500 group-hover:scale-105 ${
+                      group.id === "armdesigns" ? "object-contain" : "object-cover"
+                    }`}
                     placeholderColor="#c9b8e0"
                   />
                 </div>
@@ -103,13 +108,13 @@ function MenuCategorySection({
   );
 }
 
-export function SchminkMenu() {
+export function SchminkMenu({ portfolioItems }: { portfolioItems: PortfolioItem[] }) {
   const { schminkMenu } = siteContent;
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const dialogTitleId = useId();
 
-  const menuItems = getMenuItems();
+  const menuItems = getMenuItems(portfolioItems);
   const itemsByCategory = siteContent.schminkMenu.categories.map((cat) => ({
     ...cat,
     items: menuItems.filter((item) => item.category === cat.id),
@@ -149,7 +154,6 @@ export function SchminkMenu() {
       <SectionHeading
         id="schmink-menu-title"
         title={schminkMenu.title}
-        subtitle={schminkMenu.subtitle}
       />
 
       <p className="mx-auto -mt-4 mb-10 max-w-2xl text-center text-base leading-relaxed text-ink-muted">

@@ -9,6 +9,8 @@ import {
   type PortfolioCategoryId,
   type GalleryItem,
 } from "@/data/siteContent";
+import portfolioItemsSeed from "@/data/portfolio-items.json";
+import type { PortfolioItem } from "@/lib/portfolio-types";
 import { SafeImage } from "@/components/SafeImage";
 import { Section, SectionHeading } from "@/components/ui/Section";
 
@@ -176,7 +178,9 @@ export function PortfolioGallery({
   const closeBtnRef = useRef<HTMLButtonElement>(null);
   const dialogTitleId = useId();
 
-  const itemPool = galleryItems ?? getPortfolioItems();
+  const itemPool =
+    galleryItems ??
+    getPortfolioItems(portfolioItemsSeed as PortfolioItem[]);
   const baseItems = resolveItems(itemIds, itemPool);
 
   const categorySource =

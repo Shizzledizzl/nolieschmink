@@ -4,15 +4,20 @@ import { Hero } from "@/components/sections/Hero";
 import { WorkPreview } from "@/components/sections/WorkPreview";
 import { Contact } from "@/components/sections/Contact";
 import { JsonLd } from "@/components/JsonLd";
+import { readPortfolioItems } from "@/lib/portfolio-store";
 
-export default function HomePage() {
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const portfolioItems = await readPortfolioItems();
+
   return (
     <>
       <JsonLd />
       <Header />
       <main>
         <Hero />
-        <WorkPreview />
+        <WorkPreview portfolioItems={portfolioItems} />
         <Contact />
       </main>
       <Footer />
