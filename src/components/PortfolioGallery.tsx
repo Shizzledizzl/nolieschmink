@@ -47,13 +47,16 @@ function GalleryPhoto({
   index,
   onOpen,
   showItemLabels,
+  uniformAspect = false,
 }: {
   item: GalleryItem;
   index: number;
   onOpen: (index: number) => void;
   showItemLabels: boolean;
+  uniformAspect?: boolean;
 }) {
   const isArmDesign = item.category === "armdesigns";
+  const useSquare = uniformAspect || !isArmDesign;
 
   return (
     <button
@@ -67,10 +70,10 @@ function GalleryPhoto({
       }
     >
       <div
-        className={`relative ${isArmDesign ? "aspect-[4/3]" : "aspect-square"}`}
+        className={`relative ${useSquare ? "aspect-square" : "aspect-[4/3]"}`}
         style={{
           position: "relative",
-          aspectRatio: isArmDesign ? "4 / 3" : "1 / 1",
+          aspectRatio: useSquare ? "1 / 1" : "4 / 3",
         }}
       >
         <SafeImage
@@ -79,7 +82,7 @@ function GalleryPhoto({
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className={`transition-transform duration-500 group-hover:scale-105 ${
-            isArmDesign ? "object-contain" : "object-cover"
+            useSquare ? "object-cover" : "object-contain"
           }`}
           placeholderColor="#7ec8c0"
         />
@@ -309,6 +312,7 @@ export function PortfolioGallery({
                   index={index}
                   onOpen={openLightbox}
                   showItemLabels={showItemLabels}
+                  uniformAspect
                 />
               </li>
             ))}
@@ -323,6 +327,7 @@ export function PortfolioGallery({
                     index={3}
                     onOpen={openLightbox}
                     showItemLabels={showItemLabels}
+                    uniformAspect
                   />
                 )}
                 {bottomRight && (
@@ -331,6 +336,7 @@ export function PortfolioGallery({
                     index={4}
                     onOpen={openLightbox}
                     showItemLabels={showItemLabels}
+                    uniformAspect
                   />
                 )}
                 {viewAllButton && (
@@ -346,6 +352,7 @@ export function PortfolioGallery({
                       index={3}
                       onOpen={openLightbox}
                       showItemLabels={showItemLabels}
+                      uniformAspect
                     />
                   )}
                 </div>
@@ -357,6 +364,7 @@ export function PortfolioGallery({
                       index={4}
                       onOpen={openLightbox}
                       showItemLabels={showItemLabels}
+                      uniformAspect
                     />
                   )}
                 </div>

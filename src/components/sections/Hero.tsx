@@ -63,18 +63,15 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div
-            className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-md"
-            style={{ position: "relative", aspectRatio: "4 / 5", overflow: "hidden" }}
-          >
+        <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-md lg:justify-self-end">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm ring-1 ring-lavender/30">
             <SafeImage
               src={hero.image.src}
               alt={hero.image.alt}
               fill
               priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              sizes="(max-width: 768px) 80vw, 320px"
+              className="object-cover object-[center_20%]"
               placeholderColor="#9b7eb8"
             />
           </div>

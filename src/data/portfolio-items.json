@@ -3,8 +3,8 @@
     "id": "arm-gecombineerd",
     "title": "Armdesigns",
     "category": "armdesigns",
-    "src": "/images/schmink-arm-gecombineerd.jpg",
-    "alt": "Twee armdesigns naast elkaar: eenhoorn met regenboog en rozenrank in het roze"
+    "src": "/images/arm-designs-triptych.png",
+    "alt": "Drie armdesigns: raket, eenhoorn met regenboog en rozenrank"
   },
   {
     "id": "bloemenkroon-meisje",
@@ -22,10 +22,19 @@
   },
   {
     "id": "nola-konijnenoren",
-    "title": "Konijn",
+    "title": "Nola",
     "category": "dieren",
     "src": "/images/nola-konijnenoren.jpg",
-    "alt": "Meisje met roze konijnenoren-schmink op het voorhoofd"
+    "alt": "Meisje met roze konijnenoren-schmink en bloemetjes op de wangen",
+    "kind": "gezicht"
+  },
+  {
+    "id": "prinses-tiara",
+    "title": "Prinses",
+    "category": "prinsessen",
+    "src": "/images/prinses-tiara.png",
+    "alt": "Meisje met blauw-witte prinsessen-schmink, glitter en tiara",
+    "kind": "gezicht"
   },
   {
     "id": "ijskoningin-meisje",

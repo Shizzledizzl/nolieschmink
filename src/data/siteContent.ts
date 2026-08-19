@@ -82,8 +82,8 @@ export const siteContent = {
     secondaryCta: "Neem contact op",
     eyebrow: "Nolie Schmink",
     image: {
-      src: "/images/raket-arm.jpg",
-      alt: "Kleurrijk raket-armdesign met vlammen en sterren",
+      src: "/images/hero-konijnenoren.png",
+      alt: "Meisje met roze konijnenoren-schmink en bloemetjes op de wangen",
     },
   },
 
@@ -146,7 +146,7 @@ export const siteContent = {
       "bloemenkroon-meisje",
       "hulk",
       "nola-konijnenoren",
-      "draak-jongen",
+      "prinses-tiara",
     ],
     viewAllLabel: "Bekijk het volledige portfolio",
     viewAllHref: "/portfolio",
