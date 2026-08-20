@@ -11,6 +11,10 @@ export function WorkPreview({ portfolioItems }: { portfolioItems: PortfolioItem[
       title={featuredWork.title}
       subtitle={featuredWork.subtitle}
       galleryItems={resolveFeaturedItems(portfolioItems, featuredWork.itemIds)}
+      homepageMobileItems={resolveFeaturedItems(
+        portfolioItems,
+        featuredWork.mobileItemIds
+      )}
       layout="homepage"
       showCategories={false}
       showItemLabels={false}

@@ -47,8 +47,9 @@
     "id": "draak-jongen",
     "title": "Draak",
     "category": "prinsessen",
-    "src": "/images/schmink-draak-jongen.jpg",
-    "alt": "Jongen met oranje draak-schmink op het voorhoofd met vlammen"
+    "src": "/images/draak-jongen.png",
+    "alt": "Jongen met oranje draak-schmink op het voorhoofd met vlammen",
+    "kind": "gezicht"
   },
   {
     "id": "octopus",

@@ -68,6 +68,8 @@ export const siteContent = {
         "Schminkfoto's en armdesigns: dieren, prinsessen, helden, bloemen en glitter. Inspiratie voor je kinderfeestje in Veenendaal en omgeving.",
       schminkMenu:
         "Kies je favoriete schmink: dino, prinses, superhero en meer. Ideeën voor kinderfeestjes bij Nolie Schmink in Veenendaal.",
+      tarief:
+        "Tarieven voor schmink op locatie in Veenendaal en omgeving: €50 per uur, pakketten en reiskosten. Hobbytarief voor kinderfeestjes.",
     },
   },
 
@@ -145,8 +147,15 @@ export const siteContent = {
       "arm-gecombineerd",
       "bloemenkroon-meisje",
       "hulk",
-      "nola-konijnenoren",
+      "draak-jongen",
       "prinses-tiara",
+    ],
+    mobileItemIds: [
+      "arm-gecombineerd",
+      "bloemenkroon-meisje",
+      "prinses-tiara",
+      "hulk",
+      "draak-jongen",
     ],
     viewAllLabel: "Bekijk het volledige portfolio",
     viewAllHref: "/portfolio",
@@ -244,10 +253,17 @@ export const siteContent = {
     title: "Tarief",
     subtitle:
       "Ik doe dit met veel plezier — daarom reken ik een hobbytarief. Zo blijft schminken betaalbaar voor kinderfeestjes en andere leuke momenten.",
-    label: "Hobbytarief",
-    hourlyRate: "€ 50",
-    unit: "per uur",
+    tiers: [
+      { duration: "1 uur", price: "€ 50" },
+      { duration: "1,5 uur", price: "€ 75" },
+      { duration: "2 uur", price: "€ 90" },
+      { duration: "3+ uur", price: "€ 45 per uur" },
+    ],
+    travel: "€ 0,20 reiskosten per km boven de 20 km",
     note: "Op locatie. Neem contact op voor beschikbaarheid en een prijsopgave op maat.",
+    summary: "Vanaf € 50 per uur",
+    homepageTeaser: "€ 50 per uur en € 90 voor 2 uur",
+    homepageLinkLabel: "Bekijk alle tarieven",
   },
 
   /**
@@ -258,6 +274,7 @@ export const siteContent = {
       { href: "/over-mij", label: "Over mij" },
       { href: "/schmink-menu", label: "Schmink menu" },
       { href: "/portfolio", label: "Portfolio" },
+      { href: "/tarief", label: "Tarief" },
       { href: "#contact", label: "Contact" },
     ],
     cta: "Neem contact op",

@@ -30,6 +30,7 @@ type PortfolioGalleryProps = {
   showLightboxDetails?: boolean;
   layout?: "grid" | "homepage" | "grouped";
   className?: string;
+  homepageMobileItems?: GalleryItem[];
 };
 
 function resolveItems(
@@ -173,6 +174,7 @@ export function PortfolioGallery({
   showLightboxDetails = true,
   layout = "grid",
   className = "",
+  homepageMobileItems,
 }: PortfolioGalleryProps) {
   const { portfolio } = siteContent;
   const [activeCategory, setActiveCategory] =
@@ -265,6 +267,16 @@ export function PortfolioGallery({
   const topItems = layout === "homepage" ? filtered.slice(0, 3) : filtered;
   const bottomLeft = layout === "homepage" ? filtered[3] : undefined;
   const bottomRight = layout === "homepage" ? filtered[4] : undefined;
+  const mobileItems =
+    layout === "homepage"
+      ? (homepageMobileItems ?? [
+          ...topItems,
+          ...(bottomLeft ? [bottomLeft] : []),
+          ...(bottomRight ? [bottomRight] : []),
+        ])
+      : [];
+  const lightboxIndexFor = (item: GalleryItem) =>
+    filtered.findIndex((entry) => entry.id === item.id);
 
   return (
     <Section
@@ -304,7 +316,24 @@ export function PortfolioGallery({
 
       {layout === "homepage" ? (
         <div className="space-y-4">
-          <ul className="grid gap-4 sm:grid-cols-3">
+          <ul className="grid gap-4 sm:hidden">
+            {mobileItems.map((item) => (
+              <li key={item.id}>
+                <GalleryPhoto
+                  item={item}
+                  index={lightboxIndexFor(item)}
+                  onOpen={openLightbox}
+                  showItemLabels={showItemLabels}
+                  uniformAspect
+                />
+              </li>
+            ))}
+            {viewAllButton && (
+              <li className="flex justify-center pt-2">{viewAllButton}</li>
+            )}
+          </ul>
+
+          <ul className="hidden gap-4 sm:grid sm:grid-cols-3">
             {topItems.map((item, index) => (
               <li key={item.id}>
                 <GalleryPhoto
@@ -320,30 +349,6 @@ export function PortfolioGallery({
 
           {(bottomLeft || bottomRight || viewAllButton) && (
             <>
-              <div className="grid gap-4 sm:hidden">
-                {bottomLeft && (
-                  <GalleryPhoto
-                    item={bottomLeft}
-                    index={3}
-                    onOpen={openLightbox}
-                    showItemLabels={showItemLabels}
-                    uniformAspect
-                  />
-                )}
-                {bottomRight && (
-                  <GalleryPhoto
-                    item={bottomRight}
-                    index={4}
-                    onOpen={openLightbox}
-                    showItemLabels={showItemLabels}
-                    uniformAspect
-                  />
-                )}
-                {viewAllButton && (
-                  <div className="flex justify-center pt-2">{viewAllButton}</div>
-                )}
-              </div>
-
               <div className="hidden gap-4 sm:grid sm:grid-cols-3 sm:items-center">
                 <div>
                   {bottomLeft && (

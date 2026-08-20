@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/voorwaarden" },
 };
 
+const pricingTierText = siteContent.pricing.tiers
+  .map((tier) => `${tier.duration} ${tier.price}`)
+  .join(", ");
+
 const sections = [
   {
     title: "Boekingen",
@@ -24,8 +28,8 @@ const sections = [
     body: "De betalingsafspraken worden per boeking bevestigd. Denk aan een aanbetaling, betaling op locatie of factuur achteraf. Exacte bedragen en termijnen staan in de bevestiging. [Pas dit aan met jouw eigen betalingsbeleid.]",
   },
   {
-    title: "Reiskosten",
-    body: `Het uurtarief is ${siteContent.pricing.hourlyRate} ${siteContent.pricing.unit}. Reiskosten kunnen in rekening worden gebracht afhankelijk van de locatie. Parkeerkosten worden doorberekend indien van toepassing.`,
+    title: "Tarieven en reiskosten",
+    body: `${pricingTierText}. ${siteContent.pricing.travel}. Parkeerkosten worden doorberekend indien van toepassing.`,
   },
   {
     title: "Annulering door de klant",
