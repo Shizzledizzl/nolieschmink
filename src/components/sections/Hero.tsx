@@ -2,7 +2,7 @@ import { siteContent } from "@/data/siteContent";
 import { SafeImage } from "@/components/SafeImage";
 
 export function Hero() {
-  const { hero, pricing } = siteContent;
+  const { hero } = siteContent;
 
   return (
     <section
@@ -40,41 +40,17 @@ export function Hero() {
               {hero.secondaryCta}
             </a>
           </div>
-
-          <div
-            className="mt-8 max-w-sm rounded-2xl bg-white px-5 py-4 shadow-sm ring-1 ring-lavender/40"
-            aria-label={`${pricing.label}: ${pricing.hourlyRate} ${pricing.unit}`}
-          >
-            <p className="text-xs font-semibold uppercase tracking-wide text-purple-soft">
-              {pricing.title}
-            </p>
-            <p className="mt-1 text-sm leading-relaxed text-ink-muted">
-              {pricing.subtitle}
-            </p>
-            <p className="mt-3 text-sm font-semibold text-purple-soft">
-              {pricing.label}
-            </p>
-            <p className="font-display text-3xl font-semibold text-purple-deep">
-              {pricing.hourlyRate}
-              <span className="ml-1 text-base font-medium text-ink-muted">
-                {pricing.unit}
-              </span>
-            </p>
-          </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div
-            className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-md"
-            style={{ position: "relative", aspectRatio: "4 / 5", overflow: "hidden" }}
-          >
+        <div className="relative w-full">
+          <div className="relative aspect-square overflow-hidden rounded-2xl shadow-md ring-1 ring-lavender/30">
             <SafeImage
               src={hero.image.src}
               alt={hero.image.alt}
               fill
               priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center"
               placeholderColor="#9b7eb8"
             />
           </div>

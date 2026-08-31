@@ -1,7 +1,8 @@
-import { siteContent } from "@/data/siteContent";
+import { siteContent, resolveFeaturedItems } from "@/data/siteContent";
 import { PortfolioGallery } from "@/components/PortfolioGallery";
+import type { PortfolioItem } from "@/lib/portfolio-types";
 
-export function WorkPreview() {
+export function WorkPreview({ portfolioItems }: { portfolioItems: PortfolioItem[] }) {
   const { featuredWork } = siteContent;
 
   return (
@@ -9,7 +10,11 @@ export function WorkPreview() {
       sectionId="werk"
       title={featuredWork.title}
       subtitle={featuredWork.subtitle}
-      itemIds={featuredWork.itemIds}
+      galleryItems={resolveFeaturedItems(portfolioItems, featuredWork.itemIds)}
+      homepageMobileItems={resolveFeaturedItems(
+        portfolioItems,
+        featuredWork.mobileItemIds
+      )}
       layout="homepage"
       showCategories={false}
       showItemLabels={false}

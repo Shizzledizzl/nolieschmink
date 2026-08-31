@@ -1,8 +1,11 @@
+export const dynamic = "force-dynamic";
+
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PortfolioGallery } from "@/components/PortfolioGallery";
 import { siteContent, getPortfolioItems } from "@/data/siteContent";
+import { readPortfolioItems } from "@/lib/portfolio-store";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -10,8 +13,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/portfolio" },
 };
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
   const { portfolio } = siteContent;
+  const items = await readPortfolioItems();
 
   return (
     <>
@@ -21,7 +25,7 @@ export default function PortfolioPage() {
           sectionId="portfolio"
           title={portfolio.pageTitle}
           subtitle={portfolio.pageSubtitle}
-          galleryItems={getPortfolioItems()}
+          galleryItems={getPortfolioItems(items)}
           showCategories={false}
           showConsentNote
           className="border-t border-lavender/30 bg-surface-alt/40"
