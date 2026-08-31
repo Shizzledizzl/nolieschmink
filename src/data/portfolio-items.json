@@ -29,19 +29,12 @@
     "kind": "gezicht"
   },
   {
-    "id": "prinses-tiara",
-    "title": "Prinses",
-    "category": "prinsessen",
-    "src": "/images/prinses-tiara.png",
-    "alt": "Meisje met blauw-witte prinsessen-schmink, glitter en tiara",
-    "kind": "gezicht"
-  },
-  {
     "id": "ijskoningin-meisje",
     "title": "Ijskoningin",
     "category": "prinsessen",
     "src": "/images/schmink-ijskoningin-meisje.jpg",
-    "alt": "Meisje met ijskoningin-schmink, blauwe glitter en tiara"
+    "alt": "Meisje met ijskoningin-schmink, blauwe glitter en tiara",
+    "kind": "gezicht"
   },
   {
     "id": "draak-jongen",
