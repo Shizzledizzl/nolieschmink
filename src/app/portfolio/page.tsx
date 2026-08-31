@@ -28,6 +28,8 @@ export default async function PortfolioPage() {
           galleryItems={getPortfolioItems(items)}
           showCategories={false}
           showConsentNote
+          showItemLabels={false}
+          showLightboxDetails={false}
           className="border-t border-lavender/30 bg-surface-alt/40"
         />
       </main>

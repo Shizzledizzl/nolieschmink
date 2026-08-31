@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronDown, X } from "lucide-react";
 import { siteContent, getMenuItems, type GalleryItem, type MenuThemeId } from "@/data/siteContent";
 import type { PortfolioItem } from "@/lib/portfolio-types";
@@ -42,24 +42,22 @@ function MenuCategorySection({
             }
           >
             {"comingSoon" in item && item.comingSoon ? (
-              <div className="flex w-full flex-col overflow-hidden rounded-2xl bg-white text-left shadow-sm ring-1 ring-lavender/30 ring-dashed">
+              <div className="flex w-full overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-lavender/30 ring-dashed">
                 <div
-                  className="relative flex aspect-square items-center justify-center bg-lavender/15"
+                  className="relative flex aspect-square w-full items-center justify-center bg-lavender/15"
                   style={{ aspectRatio: "1 / 1" }}
                 >
                   <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-purple-deep">
                     Binnenkort
                   </span>
                 </div>
-                <span className="px-3 py-2.5 text-sm font-semibold text-ink-muted">
-                  {item.title}
-                </span>
               </div>
             ) : (
               <button
                 type="button"
                 onClick={() => onOpenLightbox(item.id)}
-                className="group flex w-full flex-col overflow-hidden rounded-2xl bg-white text-left shadow-sm ring-1 ring-lavender/30 transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-soft"
+                aria-label="Vergroot afbeelding"
+                className="group relative block w-full overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-lavender/30 transition-all hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-soft"
               >
                 <div
                   className={`relative ${group.id === "armdesigns" ? "aspect-[4/3]" : "aspect-square"}`}
@@ -70,7 +68,7 @@ function MenuCategorySection({
                 >
                   <SafeImage
                     src={item.src}
-                    alt={item.alt}
+                    alt=""
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className={`transition-transform duration-500 group-hover:scale-105 ${
@@ -79,9 +77,6 @@ function MenuCategorySection({
                     placeholderColor="#c9b8e0"
                   />
                 </div>
-                <span className="px-3 py-2.5 text-sm font-semibold text-ink">
-                  {item.title}
-                </span>
               </button>
             )}
           </li>
@@ -112,7 +107,6 @@ export function SchminkMenu({ portfolioItems }: { portfolioItems: PortfolioItem[
   const { schminkMenu } = siteContent;
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
-  const dialogTitleId = useId();
 
   const menuItems = getMenuItems(portfolioItems);
   const itemsByCategory = siteContent.schminkMenu.categories.map((cat) => ({
@@ -183,7 +177,7 @@ export function SchminkMenu({ portfolioItems }: { portfolioItems: PortfolioItem[
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-          aria-labelledby={dialogTitleId}
+          aria-label="Vergrote afbeelding"
         >
           <button
             type="button"
@@ -192,13 +186,7 @@ export function SchminkMenu({ portfolioItems }: { portfolioItems: PortfolioItem[
             onClick={closeLightbox}
           />
           <div className="relative z-10 w-full max-w-3xl overflow-hidden rounded-3xl bg-white shadow-2xl">
-            <div className="flex items-center justify-between border-b border-lavender/30 px-4 py-3">
-              <h3
-                id={dialogTitleId}
-                className="font-display text-lg font-semibold text-purple-deep"
-              >
-                {activeItem.title}
-              </h3>
+            <div className="flex items-center justify-end border-b border-lavender/30 px-4 py-3">
               <button
                 ref={closeBtnRef}
                 type="button"
@@ -215,14 +203,13 @@ export function SchminkMenu({ portfolioItems }: { portfolioItems: PortfolioItem[
             >
               <SafeImage
                 src={activeItem.src}
-                alt={activeItem.alt}
+                alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 768px"
                 className="object-contain"
                 placeholderColor="#c9b8e0"
               />
             </div>
-            <p className="px-4 py-3 text-sm text-ink-muted">{activeItem.alt}</p>
           </div>
         </div>
       )}
