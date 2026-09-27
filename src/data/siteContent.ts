@@ -119,7 +119,7 @@ export const siteContent = {
     consentNote:
       "Ik maak alleen foto's van kinderen met toestemming van de ouders.",
     /** Niet tonen op portfolio-pagina of in homepage-selectie. */
-    hiddenItemIds: ["arm-gecombineerd", "arm-lelies"],
+    hiddenItemIds: ["arm-gecombineerd"],
     portfolioCategories: [
       { id: "all", label: "Alles" },
       { id: "armdesigns", label: "Armdesigns" },
