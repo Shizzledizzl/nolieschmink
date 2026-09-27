@@ -119,7 +119,7 @@ export const siteContent = {
     consentNote:
       "Ik maak alleen foto's van kinderen met toestemming van de ouders.",
     /** Niet tonen op portfolio-pagina of in homepage-selectie. */
-    hiddenItemIds: ["arm-gecombineerd"],
+    hiddenItemIds: ["arm-gecombineerd", "arm-lelies"],
     portfolioCategories: [
       { id: "all", label: "Alles" },
       { id: "armdesigns", label: "Armdesigns" },
@@ -176,6 +176,7 @@ export const siteContent = {
       "arm-gecombineerd",
       "arm-rozen-lang",
       "arm-rozen-regenboog",
+      "arm-lelies",
       "spin-oefen",
       "paarse-ros",
       "regenboogbloem-oefen",
@@ -243,7 +244,6 @@ export const siteContent = {
         label: "Arm Designs",
         itemIds: [
           "arm-raket",
-          "arm-lelies",
           "arm-rozen-roze",
           "arm-rozen-kind",
           "hand-dino",
