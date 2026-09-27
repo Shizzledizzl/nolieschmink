@@ -200,6 +200,8 @@ export const siteContent = {
           "eenhoorn-oranje-oefen",
           "hart-neon-oefen",
           "regenboog-hart-oefen",
+          "regenboog-hart-wang-oefen",
+          "eenhoorn-vleugel-oefen",
         ],
       },
       {
@@ -216,6 +218,7 @@ export const siteContent = {
           "captain-america-oefen",
           "superheld",
           "batman-nacht-oefen",
+          "minecraft-oefen",
           "hulk-oefen",
         ],
       },
@@ -236,7 +239,7 @@ export const siteContent = {
           "vlinder-roze-oefen",
           "vlinder-regenboog-vol-oefen",
           "flamingo-oefen",
-          "schildpad-reserve",
+          "schildpad-oefen",
         ],
       },
       {
@@ -247,6 +250,7 @@ export const siteContent = {
           "regenboog-swirl-oefen",
           "bloem-voorhoofd-oefen",
           "bloem-wang-oefen",
+          "bloemen-blauw-oefen",
         ],
       },
       {
@@ -289,7 +293,9 @@ export const siteContent = {
       { duration: "2 uur", price: "€ 90" },
       { duration: "3+ uur", price: "€ 45 per uur" },
     ],
-    travel: "€ 0,20 reiskosten per km boven de 20 km",
+    travel: "€ 0,20 reiskosten per km boven de 10 km",
+    deposit:
+      "Bij bevestiging van een boeking vraag ik een aanbetaling van 10% van het overeengekomen tarief. Het resterende bedrag betaal je op locatie, tenzij anders is afgesproken.",
     note: "Op locatie. Neem contact op voor beschikbaarheid en een prijsopgave op maat.",
     summary: "Vanaf € 50 per uur",
     homepageTeaser: "€ 50 per uur en € 90 voor 2 uur",

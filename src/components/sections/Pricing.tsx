@@ -34,6 +34,9 @@ export function Pricing() {
         <p className="mt-5 border-t border-lavender/30 pt-5 text-sm leading-relaxed text-ink-muted">
           {pricing.travel}
         </p>
+        <p className="mt-3 text-sm leading-relaxed text-ink-muted">
+          {pricing.deposit}
+        </p>
         <p className="mt-3 text-sm leading-relaxed text-ink-muted">{pricing.note}</p>
       </div>
     </Section>

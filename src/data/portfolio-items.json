@@ -325,12 +325,11 @@
     "alt": "Roze flamingo-schmink met glitter en veeraccenten op oefengezicht"
   },
   {
-    "id": "schildpad-reserve",
+    "id": "schildpad-oefen",
     "title": "Schildpad",
     "category": "dieren",
-    "src": "",
-    "alt": "Schildpad-schmink — binnenkort beschikbaar",
-    "comingSoon": true
+    "src": "/images/schmink-schildpad-oefen.png",
+    "alt": "Groene schildpad-schmink met glitter op oefengezicht"
   },
   {
     "id": "hello-kitty",
@@ -429,6 +428,34 @@
     "category": "dieren",
     "src": "/images/schmink-rups-oefen.png",
     "alt": "Roze glitter rups-schmink met groene bladeren op oefengezicht"
+  },
+  {
+    "id": "regenboog-hart-wang-oefen",
+    "title": "Regenboog hart",
+    "category": "prinsessen",
+    "src": "/images/schmink-regenboog-hart-wang-oefen.png",
+    "alt": "Regenboog hart-schmink op de wang met witte swirls en glitter op oefengezicht"
+  },
+  {
+    "id": "bloemen-blauw-oefen",
+    "title": "Bloemen blauw",
+    "category": "bloemen",
+    "src": "/images/schmink-bloemen-blauw-oefen.png",
+    "alt": "Blauw-wit bloemen-schmink met swirls en steentjes op oefengezicht"
+  },
+  {
+    "id": "minecraft-oefen",
+    "title": "Minecraft",
+    "category": "helden",
+    "src": "/images/schmink-minecraft-oefen.png",
+    "alt": "Minecraft Creeper-schmink op het voorhoofd op oefengezicht"
+  },
+  {
+    "id": "eenhoorn-vleugel-oefen",
+    "title": "Eenhoorn vleugel",
+    "category": "prinsessen",
+    "src": "/images/schmink-eenhoorn-vleugel-oefen.png",
+    "alt": "Eenhoorn-schmink met regenboogvleugel en glitter op oefengezicht"
   },
   {
     "id": "prinses",

@@ -25,19 +25,19 @@ const sections = [
   },
   {
     title: "Betaling",
-    body: "De betalingsafspraken worden per boeking bevestigd. Denk aan een aanbetaling, betaling op locatie of factuur achteraf. Exacte bedragen en termijnen staan in de bevestiging. [Pas dit aan met jouw eigen betalingsbeleid.]",
+    body: `De betalingsafspraken worden per boeking bevestigd. ${siteContent.pricing.deposit} Exacte bedragen en termijnen staan in de bevestiging.`,
   },
   {
     title: "Tarieven en reiskosten",
-    body: `${pricingTierText}. ${siteContent.pricing.travel}. Parkeerkosten worden doorberekend indien van toepassing.`,
+    body: `${pricingTierText}. ${siteContent.pricing.travel}. ${siteContent.pricing.deposit} Parkeerkosten worden doorberekend indien van toepassing.`,
   },
   {
     title: "Annulering door de klant",
-    body: "Annuleer zo snel mogelijk bij verhindering. Bij annulering langer van tevoren mag je rekenen op soepel overleg over verplaatsen of annuleren. Bij late annulering kan een (deel van het) overeengekomen bedrag in rekening worden gebracht. [Vul hier jouw concrete annuleringsregeling in, bijvoorbeeld: gratis tot 14 dagen van tevoren, 50% binnen 7 dagen, etc.]",
+    body: "Annuleer zo snel mogelijk bij verhindering. Bij annulering langer van tevoren mag je rekenen op soepel overleg over verplaatsen of annuleren. Vanwege dit soepele annuleringsbeleid wordt er gebruik gemaakt van een kleine aanbetaling (10% van het overeengekomen tarief) bij bevestiging van de boeking.",
   },
   {
     title: "Annulering door de schminkster",
-    body: "Bij ziekte, overmacht of andere onvoorziene omstandigheden kan de boeking worden geannuleerd of verplaatst. Er wordt zo snel mogelijk contact opgenomen om samen een oplossing te zoeken, zoals een nieuwe datum of terugbetaling van reeds betaalde bedragen.",
+    body: "Bij ziekte, overmacht of andere onvoorziene omstandigheden kan de boeking worden geannuleerd of verplaatst. Er wordt zo snel mogelijk contact opgenomen om samen een oplossing te zoeken, zoals een nieuwe datum. Aanbetalingen worden terugbetaald indien er geen nieuwe afspraak wordt gemaakt.",
   },
   {
     title: "Slecht weer",
@@ -75,7 +75,7 @@ export default function TermsPage() {
             Algemene en annuleringsvoorwaarden
           </h1>
           <p className="mt-4 text-sm text-ink-muted">
-            Laatst bijgewerkt: juli 2026
+            Laatst bijgewerkt: september 2026
           </p>
 
           <div className="mt-10 space-y-8">
