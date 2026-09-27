@@ -70,6 +70,8 @@ export const siteContent = {
         "Kies je favoriete schmink: dino, prinses, superhero en meer. Ideeën voor kinderfeestjes bij Nolie Schmink in Veenendaal.",
       tarief:
         "Tarieven voor schmink op locatie in Veenendaal en omgeving: €50 per uur, pakketten en reiskosten. Hobbytarief voor kinderfeestjes.",
+      glitterTattoos:
+        "Glitter tattoos op locatie in Veenendaal en omgeving. Tijdelijke glitter-tattoos voor kinderfeestjes, naast schmink. Veel motieven mogelijk.",
     },
   },
 
@@ -181,7 +183,6 @@ export const siteContent = {
       "paarse-ros",
       "regenboogbloem-oefen",
       "vlinder-turquoise-oefen",
-      "hello-kitty",
       "fantasiekroon-oefen",
       "hart",
       "paarse-bloem-oefen",
@@ -196,6 +197,7 @@ export const siteContent = {
           "prinses",
           "eenhoorn-oefen",
           "eenhoorn-regenboog-oefen",
+          "eenhoorn-oranje-oefen",
           "hart-neon-oefen",
           "regenboog-hart-oefen",
         ],
@@ -205,12 +207,15 @@ export const siteContent = {
         label: "Helden & Figuren",
         itemIds: [
           "minnie",
+          "hello-kitty",
+          "stitch-oefen",
           "sonic-oefen",
           "pikachu",
           "charizard-oefen",
           "spiderman-oefen",
           "captain-america-oefen",
           "superheld",
+          "batman-nacht-oefen",
           "hulk-oefen",
         ],
       },
@@ -220,11 +225,16 @@ export const siteContent = {
         itemIds: [
           "octopus",
           "vos",
+          "rups-oefen",
           "tijger-oefen",
           "dino-oefen",
+          "dino-strepen-oefen",
           "draak",
+          "draak-oranje-oefen",
+          "dolfijn-oefen",
           "vlinder-oefen",
           "vlinder-roze-oefen",
+          "vlinder-regenboog-vol-oefen",
           "flamingo-oefen",
           "schildpad-reserve",
         ],
@@ -232,12 +242,23 @@ export const siteContent = {
       {
         id: "bloemen",
         label: "Bloemen en glitters",
-        itemIds: ["rozen-vine", "regenboog-swirl-oefen"],
+        itemIds: [
+          "rozen-vine",
+          "regenboog-swirl-oefen",
+          "bloem-voorhoofd-oefen",
+          "bloem-wang-oefen",
+        ],
       },
       {
         id: "thema",
         label: "Thema",
-        itemIds: ["halloween", "voetbal"],
+        itemIds: [
+          "halloween",
+          "halloween-split-oefen",
+          "halloween-schedel-oefen",
+          "voetbal",
+          "voetbal-vlam-oefen",
+        ],
       },
       {
         id: "armdesigns",
@@ -276,12 +297,30 @@ export const siteContent = {
   },
 
   /**
+   * GLITTER TATTOOS
+   */
+  glitterTattoos: {
+    title: "Glitter tattoos",
+    subtitle: "Ook op locatie, net als schmink",
+    paragraphs: [
+      "Glitter tattoos zijn tijdelijke tattoos met een vrolijke glitterlaag. Ik kom net als bij schmink naar je toe — thuis, op een kinderfeestje, verjaardag of evenement in Veenendaal en omgeving.",
+      "Er zijn veel motieven mogelijk, zoals vlinders, sterren en hartjes. Onderstaat een voorbeeld; andere kleuren en vormen zijn in overleg ook prima.",
+    ],
+    tip: "Glitter tattoos combineren met schmink kan ook. Neem contact op als je een idee hebt.",
+    image: {
+      src: "/images/glitter-tattoo-vlinders.png",
+      alt: "Drie glitter-tattoos in de vorm van vlinders op een onderarm: roze, groen en paars",
+    },
+  },
+
+  /**
    * NAVIGATIE
    */
   nav: {
     links: [
       { href: "/over-mij", label: "Over mij" },
       { href: "/schmink-menu", label: "Schmink menu" },
+      { href: "/glitter-tattoos", label: "Glitter tattoos" },
       { href: "/portfolio", label: "Portfolio" },
       { href: "/tarief", label: "Tarief" },
       { href: "#contact", label: "Contact" },

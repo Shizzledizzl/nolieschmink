@@ -336,8 +336,99 @@
     "id": "hello-kitty",
     "title": "Hello Kitty",
     "category": "helden",
-    "src": "/images/hello-kitty.jpg",
-    "alt": "Hello Kitty-schmink op oefengezicht met rode strik en snorharen"
+    "src": "/images/schmink-hello-kitty-oefen.png",
+    "alt": "Hello Kitty-schmink met roze hartjes en witte swirls op oefengezicht"
+  },
+  {
+    "id": "stitch-oefen",
+    "title": "Stitch",
+    "category": "helden",
+    "src": "/images/schmink-stitch-oefen.png",
+    "alt": "Stitch-schmink op het voorhoofd met bloemetjes en groene accenten op oefengezicht"
+  },
+  {
+    "id": "dino-strepen-oefen",
+    "title": "Dino",
+    "category": "dieren",
+    "src": "/images/schmink-dino-strepen-oefen.png",
+    "alt": "Oranje dino-schmink met blauwe strepen op oefengezicht"
+  },
+  {
+    "id": "draak-oranje-oefen",
+    "title": "Draak",
+    "category": "dieren",
+    "src": "/images/schmink-draak-oranje-oefen.png",
+    "alt": "Oranje vuurspuwende draak-schmink op oefengezicht"
+  },
+  {
+    "id": "dolfijn-oefen",
+    "title": "Dolfijn",
+    "category": "dieren",
+    "src": "/images/schmink-dolfijn-oefen.png",
+    "alt": "Blauwe dolfijn-schmink met bloemen en witte swirls op oefengezicht"
+  },
+  {
+    "id": "vlinder-regenboog-vol-oefen",
+    "title": "Vlinder regenboog",
+    "category": "dieren",
+    "src": "/images/schmink-vlinder-regenboog-vol-oefen.png",
+    "alt": "Regenboog vlinder-schmink over het hele gezicht op oefengezicht"
+  },
+  {
+    "id": "halloween-split-oefen",
+    "title": "Halloween split",
+    "category": "thema",
+    "src": "/images/schmink-halloween-split-oefen.png",
+    "alt": "Half schedel half vuur Halloween-schmink op oefengezicht"
+  },
+  {
+    "id": "halloween-schedel-oefen",
+    "title": "Schedel",
+    "category": "thema",
+    "src": "/images/schmink-halloween-schedel-oefen.png",
+    "alt": "Half schedel Halloween-schmink op oefengezicht"
+  },
+  {
+    "id": "voetbal-vlam-oefen",
+    "title": "Voetbal",
+    "category": "thema",
+    "src": "/images/schmink-voetbal-vlam-oefen.png",
+    "alt": "Voetbal-schmink met vlammen op oefengezicht"
+  },
+  {
+    "id": "bloem-voorhoofd-oefen",
+    "title": "Bloem",
+    "category": "bloemen",
+    "src": "/images/schmink-bloem-voorhoofd-oefen.png",
+    "alt": "Witte bloem op het voorhoofd met roze swirls op oefengezicht"
+  },
+  {
+    "id": "bloem-wang-oefen",
+    "title": "Bloem",
+    "category": "bloemen",
+    "src": "/images/schmink-bloem-wang-oefen.png",
+    "alt": "Roze bloem op de wang met glitter en witte accenten op oefengezicht"
+  },
+  {
+    "id": "batman-nacht-oefen",
+    "title": "Batman",
+    "category": "helden",
+    "src": "/images/schmink-batman-nacht-oefen.png",
+    "alt": "Batman-schmink met nachthemel, maan en vleermuizen op oefengezicht"
+  },
+  {
+    "id": "eenhoorn-oranje-oefen",
+    "title": "Eenhoorn",
+    "category": "prinsessen",
+    "src": "/images/schmink-eenhoorn-oranje-oefen.png",
+    "alt": "Oranje-roze eenhoorn-schmink met hoorn en vleugels op oefengezicht"
+  },
+  {
+    "id": "rups-oefen",
+    "title": "Rups",
+    "category": "dieren",
+    "src": "/images/schmink-rups-oefen.png",
+    "alt": "Roze glitter rups-schmink met groene bladeren op oefengezicht"
   },
   {
     "id": "prinses",
@@ -434,6 +525,46 @@
     "category": "dieren",
     "src": "/images/schmink-vlinder-meisje.png",
     "alt": "Meisje met kleurrijke vlinder-schmink in blauw, roze en neon op het gezicht",
+    "kind": "gezicht"
+  },
+  {
+    "id": "rupsjes-meisje",
+    "title": "Rupsjes",
+    "category": "dieren",
+    "src": "/images/schmink-rupsjes-meisje.png",
+    "alt": "Meisje met roze rupsjes, groene bladeren en glitter op de wang",
+    "kind": "gezicht"
+  },
+  {
+    "id": "sonic-jongens",
+    "title": "Shadow en Tails",
+    "category": "helden",
+    "src": "/images/schmink-sonic-jongens.png",
+    "alt": "Twee jongens met Shadow en Tails schmink uit Sonic",
+    "kind": "gezicht"
+  },
+  {
+    "id": "spider-girl-meisje",
+    "title": "Spider-Girl",
+    "category": "helden",
+    "src": "/images/schmink-spider-girl-meisje.png",
+    "alt": "Meisje met roze spinnenweb-schmink en spin op het voorhoofd",
+    "kind": "gezicht"
+  },
+  {
+    "id": "pikachu-jongen",
+    "title": "Pikachu",
+    "category": "helden",
+    "src": "/images/schmink-pikachu-jongen.png",
+    "alt": "Jongen met Pikachu-schmink en Pokéball op het voorhoofd",
+    "kind": "gezicht"
+  },
+  {
+    "id": "tijger-vol-gezicht-jongen",
+    "title": "Tijger",
+    "category": "dieren",
+    "src": "/images/schmink-tijger-vol-gezicht-jongen.png",
+    "alt": "Jongen met volledige tijger-schmink over het gezicht",
     "kind": "gezicht"
   },
   {
