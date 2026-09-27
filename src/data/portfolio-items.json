@@ -429,6 +429,14 @@
     "kind": "gezicht"
   },
   {
+    "id": "vlinder-meisje",
+    "title": "Vlinder",
+    "category": "dieren",
+    "src": "/images/schmink-vlinder-meisje.png",
+    "alt": "Meisje met kleurrijke vlinder-schmink in blauw, roze en neon op het gezicht",
+    "kind": "gezicht"
+  },
+  {
     "id": "arm-rozen-paars",
     "title": "Paarse rozen",
     "category": "armdesigns",

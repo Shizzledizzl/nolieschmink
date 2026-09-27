@@ -118,6 +118,8 @@ export const siteContent = {
       "Foto's van echte schmink en armdesigns. Heb je een eigen idee? Laat het gerust weten.",
     consentNote:
       "Ik maak alleen foto's van kinderen met toestemming van de ouders.",
+    /** Niet tonen op portfolio-pagina of in homepage-selectie. */
+    hiddenItemIds: ["arm-gecombineerd"],
     portfolioCategories: [
       { id: "all", label: "Alles" },
       { id: "armdesigns", label: "Armdesigns" },
@@ -144,14 +146,14 @@ export const siteContent = {
     subtitle:
       "Een kleine selectie van mijn schmink. Voor alle foto's: ga naar Portfolio in het menu.",
     itemIds: [
-      "arm-gecombineerd",
+      "vlinder-meisje",
       "bloemenkroon-meisje",
       "hulk",
       "draak-jongen",
       "ijskoningin-meisje",
     ],
     mobileItemIds: [
-      "arm-gecombineerd",
+      "vlinder-meisje",
       "bloemenkroon-meisje",
       "ijskoningin-meisje",
       "hulk",
@@ -169,6 +171,20 @@ export const siteContent = {
     intro:
       "Dit zijn alle beschikbare designs. Variaties met kleuren zijn ook mogelijk! Een kind mag ook altijd zelf input geven.",
     tip: "Heb je een eigen idee? Dat mag ook — alles is bespreekbaar.",
+    /** Niet tonen in schminkmenu (wel in portfolio indien van toepassing). */
+    hiddenItemIds: [
+      "arm-gecombineerd",
+      "arm-rozen-lang",
+      "arm-rozen-regenboog",
+      "spin-oefen",
+      "paarse-ros",
+      "regenboogbloem-oefen",
+      "vlinder-turquoise-oefen",
+      "hello-kitty",
+      "fantasiekroon-oefen",
+      "hart",
+      "paarse-bloem-oefen",
+    ],
     categories: [
       {
         id: "prinsessen",
@@ -179,11 +195,8 @@ export const siteContent = {
           "prinses",
           "eenhoorn-oefen",
           "eenhoorn-regenboog-oefen",
-          "fantasiekroon-oefen",
-          "hart",
           "hart-neon-oefen",
           "regenboog-hart-oefen",
-          "paarse-bloem-oefen",
         ],
       },
       {
@@ -191,7 +204,6 @@ export const siteContent = {
         label: "Helden & Figuren",
         itemIds: [
           "minnie",
-          "hello-kitty",
           "sonic-oefen",
           "pikachu",
           "charizard-oefen",
@@ -212,7 +224,6 @@ export const siteContent = {
           "draak",
           "vlinder-oefen",
           "vlinder-roze-oefen",
-          "vlinder-turquoise-oefen",
           "flamingo-oefen",
           "schildpad-reserve",
         ],
@@ -220,29 +231,21 @@ export const siteContent = {
       {
         id: "bloemen",
         label: "Bloemen en glitters",
-        itemIds: [
-          "rozen-vine",
-          "paarse-ros",
-          "regenboog-swirl-oefen",
-          "regenboogbloem-oefen",
-        ],
+        itemIds: ["rozen-vine", "regenboog-swirl-oefen"],
       },
       {
         id: "thema",
         label: "Thema",
-        itemIds: ["halloween", "spin-oefen", "voetbal"],
+        itemIds: ["halloween", "voetbal"],
       },
       {
         id: "armdesigns",
         label: "Arm Designs",
         itemIds: [
           "arm-raket",
-          "arm-gecombineerd",
-          "arm-rozen-lang",
           "arm-lelies",
           "arm-rozen-roze",
           "arm-rozen-kind",
-          "arm-rozen-regenboog",
           "hand-dino",
           "minecraft-arm",
           "haai-arm",

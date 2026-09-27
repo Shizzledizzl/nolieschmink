@@ -46,6 +46,7 @@ const itemKinds: Record<string, PortfolioItemKind> = {
   "tijger-jongen": "gezicht",
   "spiderman-jongen": "gezicht",
   "konijn-meisje": "gezicht",
+  "vlinder-meisje": "gezicht",
   "arm-rozen-paars": "arm",
   "arm-bloemen-roze": "arm",
 };
@@ -61,14 +62,22 @@ export function getItemKind(
 
 export function getMenuItems(items: PortfolioItem[]): GalleryItem[] {
   const pool = new Map(items.map((item) => [item.id, item as GalleryItem]));
+  const hidden = new Set<string>(
+    siteContent.schminkMenu.hiddenItemIds as readonly string[]
+  );
+  const isMenuVisible = (id: string) => !hidden.has(id);
 
   return siteContent.schminkMenu.categories.flatMap((cat) => {
     const fromIds = cat.itemIds
       .map((id) => pool.get(id))
-      .filter((item): item is GalleryItem => item !== undefined);
+      .filter(
+        (item): item is GalleryItem =>
+          item !== undefined && isMenuVisible(item.id)
+      );
 
     const extras = items.filter(
       (item) =>
+        isMenuVisible(item.id) &&
         !(cat.itemIds as readonly string[]).includes(item.id) &&
         !("comingSoon" in item && item.comingSoon) &&
         ((cat.id === "armdesigns" && getItemKind(item.id, items) === "arm") ||
@@ -85,8 +94,15 @@ export function getMenuItems(items: PortfolioItem[]): GalleryItem[] {
 }
 
 export function getPortfolioItems(items: PortfolioItem[]): GalleryItem[] {
+  const hidden = new Set<string>(
+    siteContent.portfolio.hiddenItemIds as readonly string[]
+  );
   return items
-    .filter((item) => getItemKind(item.id, items) !== "oefengezicht")
+    .filter(
+      (item) =>
+        !hidden.has(item.id) &&
+        getItemKind(item.id, items) !== "oefengezicht"
+    )
     .map((item) => ({
       ...item,
       category:
