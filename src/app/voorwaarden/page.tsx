@@ -48,10 +48,6 @@ const sections = [
     body: "Er wordt zorgvuldig omgegaan met materialen en hygiëne. Over wondjes, huidinfecties of sterk geïrriteerde huid wordt niet geschminkt. Bekende allergieën of overgevoeligheden moeten vooraf worden doorgegeven. Bij twijfel kan van schminken worden afgezien.",
   },
   {
-    title: "Aansprakelijkheid",
-    body: "Er wordt zorgvuldig gewerkt, maar een allergische reactie is nooit volledig uit te sluiten. Ouders en verzorgers blijven verantwoordelijk voor het doorgeven van bekende allergieën en huidproblemen. Aansprakelijkheid voor indirecte schade is, voor zover de wet dat toelaat, beperkt. Dit is geen juridisch advies; pas deze tekst aan met professioneel advies indien gewenst.",
-  },
-  {
     title: "Foto’s en toestemming",
     body: "Soms worden sfeerfoto’s gemaakt voor portfolio of social media. Er worden geen herkenbare foto’s van kinderen geplaatst zonder toestemming van een ouder of verzorger. Geef gerust aan als je liever geen foto’s wilt.",
   },
