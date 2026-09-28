@@ -151,7 +151,7 @@ export const siteContent = {
       "vlinder-meisje",
       "bloemenkroon-meisje",
       "hulk",
-      "draak-jongen",
+      "captain-america-jongen",
       "ijskoningin-meisje",
     ],
     mobileItemIds: [
@@ -159,7 +159,7 @@ export const siteContent = {
       "bloemenkroon-meisje",
       "ijskoningin-meisje",
       "hulk",
-      "draak-jongen",
+      "captain-america-jongen",
     ],
     viewAllLabel: "Bekijk het volledige portfolio",
     viewAllHref: "/portfolio",
