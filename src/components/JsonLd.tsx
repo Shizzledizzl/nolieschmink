@@ -23,15 +23,20 @@ export function JsonLd() {
       addressRegion: "Utrecht",
       addressCountry: "NL",
     },
-    areaServed: [
-      { "@type": "City", name: "Veenendaal" },
-      { "@type": "AdministrativeArea", name: "Utrecht" },
-    ],
+    areaServed: business.serviceCities.map((city) => ({
+      "@type": "City",
+      name: city,
+    })),
     knowsAbout: [
       "Schminken op locatie",
       "Kinderfeestjes",
       "Face painting",
-      "Schminkster Veenendaal",
+      "Schmink Veenendaal",
+      "Schmink Ede",
+      "Schmink Barneveld",
+      "Schmink Tiel",
+      "Schmink Wageningen",
+      "Nolie Schmink",
     ],
   };
 

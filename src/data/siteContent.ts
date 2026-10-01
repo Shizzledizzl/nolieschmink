@@ -30,10 +30,17 @@ export const siteContent = {
     ownerName: "Nolie",
     /** Korte omschrijving voor footer en SEO */
     shortDescription:
-      "Schminkster in Veenendaal en omgeving. Vrolijke schmink op locatie voor kinderfeestjes, verjaardagen en evenementen.",
+      "Schmink op locatie in Veenendaal, Ede, Barneveld, Tiel en Wageningen. Vrolijke schmink voor kinderfeestjes, verjaardagen en evenementen.",
     /** Geen KvK – leeg laten */
     kvkNumber: "",
-    serviceArea: "Veenendaal en omgeving",
+    serviceArea: "Veenendaal, Ede, Barneveld, Tiel en Wageningen",
+    serviceCities: [
+      "Veenendaal",
+      "Ede",
+      "Barneveld",
+      "Tiel",
+      "Wageningen",
+    ],
     /** Live website-URL voor SEO, sitemap en linkpreviews (zonder slash aan het einde) */
     websiteUrl: "https://www.nolieschmink.nl",
   },
@@ -53,9 +60,21 @@ export const siteContent = {
    * SEO / METADATA
    */
   seo: {
-    title: "Nolie Schmink | Schminkster in Veenendaal en omgeving",
+    title:
+      "Nolie Schmink | Schmink Veenendaal, Ede, Barneveld, Tiel & Wageningen",
     description:
-      "Schminkster in Veenendaal en omgeving. Vrolijke schmink op locatie voor kinderfeestjes, verjaardagen en evenementen. Hobbytarief €50 per uur. Bekijk het portfolio en neem contact op.",
+      "Schmink Veenendaal, Ede, Barneveld, Tiel en Wageningen: Nolie Schmink komt op locatie voor kinderfeestjes, verjaardagen en evenementen. Hobbytarief €50 per uur. Portfolio, schminkmenu en contact.",
+    keywords: [
+      "schmink veenendaal",
+      "schmink ede",
+      "schmink barneveld",
+      "schmink tiel",
+      "schmink wageningen",
+      "schminkster veenendaal",
+      "schmink op locatie",
+      "kinderfeestje schmink",
+      "nolie schmink",
+    ],
     locale: "nl_NL",
     language: "nl",
     ogImage: "/images/nadine-over-mij.jpg",
@@ -63,15 +82,15 @@ export const siteContent = {
       "Nadine schminkt een kind met huidvriendelijke schmink, schminkspullen op tafel",
     pages: {
       overMij:
-        "Leer Nadine kennen: schminkster uit Veenendaal. Huidvriendelijke schmink op locatie voor kinderfeestjes, verjaardagen en evenementen.",
+        "Nolie Schmink: schminkster voor Veenendaal, Ede, Barneveld, Tiel en Wageningen. Huidvriendelijke schmink op locatie voor kinderfeestjes en evenementen.",
       portfolio:
-        "Schminkfoto's en armdesigns: dieren, prinsessen, helden, bloemen en glitter. Inspiratie voor je kinderfeestje in Veenendaal en omgeving.",
+        "Portfolio schmink Veenendaal en regio: foto's van echte schmink en armdesigns. Inspiratie voor kinderfeestjes in Ede, Barneveld, Tiel en Wageningen.",
       schminkMenu:
-        "Kies je favoriete schmink: dino, prinses, superhero en meer. Ideeën voor kinderfeestjes bij Nolie Schmink in Veenendaal.",
+        "Schminkmenu van Nolie Schmink: designs voor kinderfeestjes. Schmink op locatie in Veenendaal, Ede, Barneveld, Tiel en Wageningen.",
       tarief:
-        "Tarieven voor schmink op locatie in Veenendaal en omgeving: €50 per uur, pakketten en reiskosten. Hobbytarief voor kinderfeestjes.",
+        "Tarieven schmink op locatie: Veenendaal, Ede, Barneveld, Tiel en Wageningen. €50 per uur, pakketten en reiskosten. Hobbytarief voor kinderfeestjes.",
       glitterTattoos:
-        "Glitter tattoos op locatie in Veenendaal en omgeving. Tijdelijke glitter-tattoos voor kinderfeestjes, naast schmink. Veel motieven mogelijk.",
+        "Glitter tattoos op locatie in Veenendaal, Ede, Barneveld, Tiel en Wageningen. Naast schmink, voor kinderfeestjes en evenementen.",
     },
   },
 
@@ -79,9 +98,9 @@ export const siteContent = {
    * HERO
    */
   hero: {
-    title: "Schminkster in Veenendaal en omgeving",
+    title: "Schmink op locatie in Veenendaal en regio",
     subtitle:
-      "Vrolijke schmink op locatie voor kinderfeestjes, verjaardagen en evenementen. Ik kom naar jou toe met huidvriendelijke schmink en een flinke dosis creativiteit.",
+      "Vrolijke schmink voor kinderfeestjes, verjaardagen en evenementen — ook in Ede, Barneveld, Tiel en Wageningen. Ik kom naar jou toe met huidvriendelijke schmink en een flinke dosis creativiteit.",
     primaryCta: "Bekijk mijn werk",
     secondaryCta: "Neem contact op",
     eyebrow: "Nolie Schmink",
@@ -309,7 +328,7 @@ export const siteContent = {
     title: "Glitter tattoos",
     subtitle: "Ook op locatie, net als schmink",
     paragraphs: [
-      "Glitter tattoos zijn tijdelijke tattoos met een vrolijke glitterlaag. Ik kom net als bij schmink naar je toe — thuis, op een kinderfeestje, verjaardag of evenement in Veenendaal en omgeving.",
+      "Glitter tattoos zijn tijdelijke tattoos met een vrolijke glitterlaag. Ik kom net als bij schmink naar je toe — thuis, op een kinderfeestje, verjaardag of evenement in Veenendaal, Ede, Barneveld, Tiel of Wageningen.",
       "Er zijn veel motieven mogelijk, zoals vlinders, sterren en hartjes. Onderstaat een voorbeeld; andere kleuren en vormen zijn in overleg ook prima.",
     ],
     tip: "Glitter tattoos combineren met schmink kan ook. Neem contact op als je een idee hebt.",
@@ -347,7 +366,7 @@ export const siteContent = {
    */
   footer: {
     tagline:
-      "Schminkster in Veenendaal en omgeving — vrolijke schmink op locatie",
+      "Schmink Veenendaal, Ede, Barneveld, Tiel en Wageningen — op locatie",
   },
 } as const;
 

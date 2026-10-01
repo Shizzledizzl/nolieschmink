@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     template: `%s | ${business.name}`,
   },
   description: seo.description,
+  keywords: [...seo.keywords],
   alternates: {
     canonical: "/",
   },
