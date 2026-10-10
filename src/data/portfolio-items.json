@@ -595,6 +595,38 @@
     "kind": "gezicht"
   },
   {
+    "id": "minecraft-meisje",
+    "title": "Minecraft",
+    "category": "helden",
+    "src": "/images/schmink-minecraft-meisje.png",
+    "alt": "Meisje met groene Minecraft Creeper-schmink en glitter op het voorhoofd",
+    "kind": "gezicht"
+  },
+  {
+    "id": "prinses-paars-meisje",
+    "title": "Prinses",
+    "category": "prinsessen",
+    "src": "/images/schmink-prinses-paars-meisje.png",
+    "alt": "Meisje met paarse tiara-schmink, swirls en steentjes op het voorhoofd",
+    "kind": "gezicht"
+  },
+  {
+    "id": "meisjes-hart-vlinder",
+    "title": "Hart en vlinder",
+    "category": "bloemen",
+    "src": "/images/schmink-meisjes-hart-vlinder.png",
+    "alt": "Twee meisjes met regenboog hart-schmink en kleurrijke vlinder-schmink",
+    "kind": "gezicht"
+  },
+  {
+    "id": "ijskoningin-blauw-meisje",
+    "title": "Ijskoningin",
+    "category": "prinsessen",
+    "src": "/images/schmink-ijskoningin-blauw-meisje.png",
+    "alt": "Meisje met blauwe ijskoningin-schmink, glitter en bloem met steentje",
+    "kind": "gezicht"
+  },
+  {
     "id": "arm-rozen-paars",
     "title": "Paarse rozen",
     "category": "armdesigns",

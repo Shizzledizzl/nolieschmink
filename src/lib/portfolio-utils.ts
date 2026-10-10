@@ -52,6 +52,10 @@ const itemKinds: Record<string, PortfolioItemKind> = {
   "spider-girl-meisje": "gezicht",
   "pikachu-jongen": "gezicht",
   "tijger-vol-gezicht-jongen": "gezicht",
+  "minecraft-meisje": "gezicht",
+  "prinses-paars-meisje": "gezicht",
+  "meisjes-hart-vlinder": "gezicht",
+  "ijskoningin-blauw-meisje": "gezicht",
   "arm-rozen-paars": "arm",
   "arm-bloemen-roze": "arm",
 };
