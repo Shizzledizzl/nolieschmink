@@ -30,16 +30,20 @@ export const siteContent = {
     ownerName: "Nolie",
     /** Korte omschrijving voor footer en SEO */
     shortDescription:
-      "Schmink op locatie in Veenendaal, Ede, Barneveld, Tiel en Wageningen. Vrolijke schmink voor kinderfeestjes, verjaardagen en evenementen.",
+      "Schmink op locatie in Veenendaal, Ede, Barneveld, Tiel, Wageningen, Arnhem, Rhenen en Utrecht. Vrolijke schmink voor kinderfeestjes, verjaardagen en evenementen.",
     /** Geen KvK – leeg laten */
     kvkNumber: "",
-    serviceArea: "Veenendaal, Ede, Barneveld, Tiel en Wageningen",
+    serviceArea:
+      "Veenendaal, Ede, Barneveld, Tiel, Wageningen, Arnhem, Rhenen en Utrecht",
     serviceCities: [
       "Veenendaal",
       "Ede",
       "Barneveld",
       "Tiel",
       "Wageningen",
+      "Arnhem",
+      "Rhenen",
+      "Utrecht",
     ],
     /** Live website-URL voor SEO, sitemap en linkpreviews (zonder slash aan het einde) */
     websiteUrl: "https://www.nolieschmink.nl",
@@ -70,6 +74,9 @@ export const siteContent = {
       "schmink barneveld",
       "schmink tiel",
       "schmink wageningen",
+      "schmink arnhem",
+      "schmink rhenen",
+      "schmink utrecht",
       "schminkster veenendaal",
       "schmink op locatie",
       "kinderfeestje schmink",
@@ -100,13 +107,13 @@ export const siteContent = {
   hero: {
     title: "Schmink op locatie in Veenendaal en regio",
     subtitle:
-      "Vrolijke schmink voor kinderfeestjes, verjaardagen en evenementen — ook in Ede, Barneveld, Tiel en Wageningen. Ik kom naar jou toe met huidvriendelijke schmink en een flinke dosis creativiteit.",
+      "Vrolijke schmink voor kinderfeestjes, verjaardagen en evenementen — ook in Ede, Barneveld, Tiel, Wageningen, Arnhem, Rhenen en Utrecht. Ik kom naar jou toe met huidvriendelijke schmink en een flinke dosis creativiteit.",
     primaryCta: "Bekijk mijn werk",
     secondaryCta: "Neem contact op",
     eyebrow: "Nolie Schmink",
     image: {
-      src: "/images/hero-konijnenoren.png",
-      alt: "Meisje met roze konijnenoren-schmink en bloemetjes op de wangen",
+      src: "/images/hero-twee-meisjes-schmink.png",
+      alt: "Twee meisjes met roze bloemen- en regenboog vlinder-schmink",
     },
   },
 
@@ -140,7 +147,14 @@ export const siteContent = {
     consentNote:
       "Ik maak alleen foto's van kinderen met toestemming van de ouders.",
     /** Niet tonen op portfolio-pagina of in homepage-selectie. */
-    hiddenItemIds: ["arm-gecombineerd"],
+    hiddenItemIds: [
+      "arm-gecombineerd",
+      "draak-jongen",
+      "draak-jongen-groen",
+      "arm-lelies",
+      "fantasiekroon-meisje",
+      "arm-rozen-regenboog",
+    ],
     portfolioCategories: [
       { id: "all", label: "Alles" },
       { id: "armdesigns", label: "Armdesigns" },
@@ -166,19 +180,18 @@ export const siteContent = {
     title: "Mijn werk",
     subtitle:
       "Een kleine selectie van mijn schmink. Voor alle foto's: ga naar Portfolio in het menu.",
+    /** Zelfde volgorde: op mobiel van boven naar beneden; volgende homepage-foto's onderaan toevoegen. */
     itemIds: [
-      "vlinder-meisje",
-      "bloemenkroon-meisje",
-      "hulk",
-      "captain-america-jongen",
-      "ijskoningin-meisje",
+      "dino-jongen",
+      "twee-meisjes-prinses-ijskoningin",
+      "sonic-jongens",
+      "konijn-oren-meisje",
     ],
     mobileItemIds: [
-      "vlinder-meisje",
-      "bloemenkroon-meisje",
-      "ijskoningin-meisje",
-      "hulk",
-      "captain-america-jongen",
+      "dino-jongen",
+      "twee-meisjes-prinses-ijskoningin",
+      "sonic-jongens",
+      "konijn-oren-meisje",
     ],
     viewAllLabel: "Bekijk het volledige portfolio",
     viewAllHref: "/portfolio",

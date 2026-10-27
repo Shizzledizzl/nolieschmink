@@ -55,8 +55,14 @@ const itemKinds: Record<string, PortfolioItemKind> = {
   "minecraft-meisje": "gezicht",
   "prinses-paars-meisje": "gezicht",
   "meisjes-hart-vlinder": "gezicht",
+  "fee-regenboog-meisje": "gezicht",
+  "ijskoningin-meisje-2": "gezicht",
+  "hart-regenboog-meisje": "gezicht",
   "arm-rozen-paars": "arm",
   "arm-bloemen-roze": "arm",
+  "dino-jongen": "gezicht",
+  "twee-meisjes-prinses-ijskoningin": "gezicht",
+  "konijn-oren-meisje": "gezicht",
 };
 
 export function getItemKind(

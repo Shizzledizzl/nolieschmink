@@ -564,10 +564,10 @@
   },
   {
     "id": "sonic-jongens",
-    "title": "Shadow en Tails",
+    "title": "Shadow en Sonic",
     "category": "helden",
     "src": "/images/schmink-sonic-jongens.png",
-    "alt": "Twee jongens met Shadow en Tails schmink uit Sonic",
+    "alt": "Twee jongens met Shadow en Sonic schmink op het gezicht",
     "kind": "gezicht"
   },
   {
@@ -619,6 +619,30 @@
     "kind": "gezicht"
   },
   {
+    "id": "fee-regenboog-meisje",
+    "title": "Fee en regenboog",
+    "category": "prinsessen",
+    "src": "/images/schmink-fee-regenboog-meisje.png",
+    "alt": "Meisje met regenboog-, fee- en glitter-schmink op gezicht en wang",
+    "kind": "gezicht"
+  },
+  {
+    "id": "ijskoningin-meisje-2",
+    "title": "Ijskoningin",
+    "category": "prinsessen",
+    "src": "/images/schmink-ijskoningin-meisje-2.png",
+    "alt": "Meisje met blauw-witte ijskoningin-schmink en tiara-motief op het voorhoofd",
+    "kind": "gezicht"
+  },
+  {
+    "id": "hart-regenboog-meisje",
+    "title": "Regenboog hart",
+    "category": "prinsessen",
+    "src": "/images/schmink-hart-regenboog-meisje.png",
+    "alt": "Meisje met roze hart-schmink en regenboogbogen op het voorhoofd",
+    "kind": "gezicht"
+  },
+  {
     "id": "arm-rozen-paars",
     "title": "Paarse rozen",
     "category": "armdesigns",
@@ -633,5 +657,29 @@
     "src": "/images/schmink-arm-bloemen-roze.jpg",
     "alt": "Roze bloemen-armdesign met witte swirls en sterretjes",
     "kind": "arm"
+  },
+  {
+    "id": "dino-jongen",
+    "title": "Dino",
+    "category": "dieren",
+    "src": "/images/schmink-dino-jongen.png",
+    "alt": "Jongen met groene T-rex dino-schmink op de wang met glitter",
+    "kind": "gezicht"
+  },
+  {
+    "id": "twee-meisjes-prinses-ijskoningin",
+    "title": "Prinses en ijskoningin",
+    "category": "prinsessen",
+    "src": "/images/schmink-twee-meisjes-prinses-ijskoningin.png",
+    "alt": "Twee meisjes met roze bloemenkroon-schmink en blauw-witte ijskoningin-schmink",
+    "kind": "gezicht"
+  },
+  {
+    "id": "konijn-oren-meisje",
+    "title": "Konijn",
+    "category": "dieren",
+    "src": "/images/schmink-konijn-oren-meisje.png",
+    "alt": "Meisje met roze konijnenoren-schmink, bloemetjes op de wangen en glitter",
+    "kind": "gezicht"
   }
 ]

@@ -36,6 +36,9 @@ export function JsonLd() {
       "Schmink Barneveld",
       "Schmink Tiel",
       "Schmink Wageningen",
+      "Schmink Arnhem",
+      "Schmink Rhenen",
+      "Schmink Utrecht",
       "Nolie Schmink",
     ],
   };
